@@ -4,164 +4,164 @@
   ## Summary 
 | |Issue|Instances| Gas Savings
 |-|:-|:-:|:-:|
-| [[M&#x2011;01](#01)] | The `owner` is a single point of failure and a centralization risk | 5| 0|
+| [[M&#x2011;01](#M-01)] | The `owner` is a single point of failure and a centralization risk | 5| 0|
 | |Issue|Instances| Gas Savings
 |-|:-|:-:|:-:|
-| [[L&#x2011;01](#01)] | `safeApprove()` is deprecated | 1| 0|
-| [[L&#x2011;02](#02)] | Code does not follow the best practice of check-effects-interaction | 10| 0|
-| [[L&#x2011;03](#03)] | Consider implementing two-step procedure for updating protocol addresses | 2| 0|
-| [[L&#x2011;04](#04)] | Local variable shadows state variable | 4| 0|
-| [[L&#x2011;05](#05)] | Loss of precision | 1| 0|
-| [[L&#x2011;06](#06)] | Missing checks for `address(0x0)` in the constructor | 3| 0|
-| [[L&#x2011;07](#07)] | Missing checks for `address(0x0)` when updating `address` state variables | 1| 0|
-| [[L&#x2011;08](#08)] | Use of `tx.origin` is unsafe in almost every context | 2| 0|
+| [[L&#x2011;01](#L-01)] | `safeApprove()` is deprecated | 1| 0|
+| [[L&#x2011;02](#L-02)] | Code does not follow the best practice of check-effects-interaction | 10| 0|
+| [[L&#x2011;03](#L-03)] | Consider implementing two-step procedure for updating protocol addresses | 2| 0|
+| [[L&#x2011;04](#L-04)] | Local variable shadows state variable | 4| 0|
+| [[L&#x2011;05](#L-05)] | Loss of precision | 1| 0|
+| [[L&#x2011;06](#L-06)] | Missing checks for `address(0x0)` in the constructor | 3| 0|
+| [[L&#x2011;07](#L-07)] | Missing checks for `address(0x0)` when updating `address` state variables | 1| 0|
+| [[L&#x2011;08](#L-08)] | Use of `tx.origin` is unsafe in almost every context | 2| 0|
 | |Issue|Instances| Gas Savings
 |-|:-|:-:|:-:|
-| [[G&#x2011;01](#01)] | Assembly: Use scratch space for building calldata | 7| 1540|
-| [[G&#x2011;02](#02)] | `++i`/`i++` should be `unchecked{++i}`/`unchecked{i++}` when it is not possible for them to overflow, as is the case when used in `for`- and `while`-loops | 1| 60|
-| [[G&#x2011;03](#03)] | Assembly: Check `msg.sender` using `xor` and the scratch space | 3| 0|
-| [[G&#x2011;04](#04)] | Consider using solady's `FixedPointMathLib` | 7| 0|
-| [[G&#x2011;05](#05)] | Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes | 3| 25650|
-| [[G&#x2011;06](#06)] | State variables only set in the constructor should be declared `immutable` | 1| 2097|
-| [[G&#x2011;07](#07)] | Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas | 3| 360|
-| [[G&#x2011;08](#08)] | Avoid transferring amounts of zero in order to save gas | 9| 900|
-| [[G&#x2011;09](#09)] | Avoid contract existence checks by using low-level calls | 7| 700|
-| [[G&#x2011;10](#10)] | Using `bool`s for storage incurs overhead | 4| 400|
-| [[G&#x2011;11](#11)] | Multiple accesses of a mapping/array should use a local variable cache | 19| 798|
-| [[G&#x2011;12](#12)] | Optimize names to save gas | 1| 22|
-| [[G&#x2011;13](#13)] | Functions guaranteed to revert when called by normal users can be marked `payable` | 6| 126|
-| [[G&#x2011;14](#14)] | Constructors can be marked `payable` | 4| 84|
-| [[G&#x2011;15](#15)] | `unchecked {}`  can be used on the division of two `uint`s in order to save gas | 1| 20|
-| [[G&#x2011;16](#16)] | Assembly: Use scratch space when building emitted events with two data arguments | 2| 30|
-| [[G&#x2011;17](#17)] | `x += y` costs more gas than `x = x + y` for basic-typed state variables | 1| 10|
-| [[G&#x2011;18](#18)] | `++i` costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too) | 1| 5|
-| [[G&#x2011;19](#19)] | `>=` costs less gas than `>` | 5| 15|
-| [[G&#x2011;20](#20)] | Inline `modifier`s that are only used once, to save gas | 1| 0|
-| [[G&#x2011;21](#21)] | Reduce deployment costs by tweaking contracts' metadata | 4| 0|
-| [[G&#x2011;22](#22)] | Reduce gas usage by moving to Solidity 0.8.19 or later | 2| 0|
-| [[G&#x2011;23](#23)] | Remove or replace unused state variables | 1| 0|
-| [[G&#x2011;24](#24)] | Use custom errors rather than `revert()`/`require()` strings to save gas | 12| 0|
-| [[G&#x2011;25](#25)] | Using `private` rather than `public`, saves gas | 18| 0|
+| [[G&#x2011;01](#G-01)] | Assembly: Use scratch space for building calldata | 7| 1540|
+| [[G&#x2011;02](#G-02)] | `++i`/`i++` should be `unchecked{++i}`/`unchecked{i++}` when it is not possible for them to overflow, as is the case when used in `for`- and `while`-loops | 1| 60|
+| [[G&#x2011;03](#G-03)] | Assembly: Check `msg.sender` using `xor` and the scratch space | 3| 0|
+| [[G&#x2011;04](#G-04)] | Consider using solady's `FixedPointMathLib` | 7| 0|
+| [[G&#x2011;05](#G-05)] | Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes | 3| 25650|
+| [[G&#x2011;06](#G-06)] | State variables only set in the constructor should be declared `immutable` | 1| 2097|
+| [[G&#x2011;07](#G-07)] | Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas | 3| 360|
+| [[G&#x2011;08](#G-08)] | Avoid transferring amounts of zero in order to save gas | 9| 900|
+| [[G&#x2011;09](#G-09)] | Avoid contract existence checks by using low-level calls | 7| 700|
+| [[G&#x2011;10](#G-10)] | Using `bool`s for storage incurs overhead | 4| 400|
+| [[G&#x2011;11](#G-11)] | Multiple accesses of a mapping/array should use a local variable cache | 19| 798|
+| [[G&#x2011;12](#G-12)] | Optimize names to save gas | 1| 22|
+| [[G&#x2011;13](#G-13)] | Functions guaranteed to revert when called by normal users can be marked `payable` | 6| 126|
+| [[G&#x2011;14](#G-14)] | Constructors can be marked `payable` | 4| 84|
+| [[G&#x2011;15](#G-15)] | `unchecked {}`  can be used on the division of two `uint`s in order to save gas | 1| 20|
+| [[G&#x2011;16](#G-16)] | Assembly: Use scratch space when building emitted events with two data arguments | 2| 30|
+| [[G&#x2011;17](#G-17)] | `x += y` costs more gas than `x = x + y` for basic-typed state variables | 1| 10|
+| [[G&#x2011;18](#G-18)] | `++i` costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too) | 1| 5|
+| [[G&#x2011;19](#G-19)] | `>=` costs less gas than `>` | 5| 15|
+| [[G&#x2011;20](#G-20)] | Inline `modifier`s that are only used once, to save gas | 1| 0|
+| [[G&#x2011;21](#G-21)] | Reduce deployment costs by tweaking contracts' metadata | 4| 0|
+| [[G&#x2011;22](#G-22)] | Reduce gas usage by moving to Solidity 0.8.19 or later | 2| 0|
+| [[G&#x2011;23](#G-23)] | Remove or replace unused state variables | 1| 0|
+| [[G&#x2011;24](#G-24)] | Use custom errors rather than `revert()`/`require()` strings to save gas | 12| 0|
+| [[G&#x2011;25](#G-25)] | Using `private` rather than `public`, saves gas | 18| 0|
 | |Issue|Instances| Gas Savings
 |-|:-|:-:|:-:|
-| [[N&#x2011;01](#01)] | `address`es shouldn't be hard-coded | 3| 0|
-| [[N&#x2011;02](#02)] | `constant`s should be defined rather than using magic numbers | 14| 0|
-| [[N&#x2011;03](#03)] | `if`-statement can be converted to a ternary | 1| 0|
-| [[N&#x2011;04](#04)] | Assembly blocks should have extensive comments | 1| 0|
-| [[N&#x2011;05](#05)] | Avoid the use of sensitive terms | 32| 0|
-| [[N&#x2011;06](#06)] | Consider adding a block/deny-list | 2| 0|
-| [[N&#x2011;07](#07)] | Consider adding emergency-stop functionality | 3| 0|
-| [[N&#x2011;08](#08)] | Consider adding formal verification proofs | 1| 0|
-| [[N&#x2011;09](#09)] | Consider defining system-wide constants in a single file | 3| 0|
-| [[N&#x2011;10](#10)] | Consider disabling `renounceOwnership()` | 3| 0|
-| [[N&#x2011;11](#11)] | Consider making contracts `Upgradeable` | 4| 0|
-| [[N&#x2011;12](#12)] | Consider moving `msg.sender` checks to a common authorization `modifier` | 2| 0|
-| [[N&#x2011;13](#13)] | Consider using `delete` rather than assigning zero/false to clear values | 1| 0|
-| [[N&#x2011;14](#14)] | Consider using a `struct` rather than having many function input parameters | 1| 0|
-| [[N&#x2011;15](#15)] | Consider using named mappings | 10| 0|
-| [[N&#x2011;16](#16)] | Constants in comparisons should appear on the left side | 11| 0|
-| [[N&#x2011;17](#17)] | Contract should expose an `interface` | 18| 0|
-| [[N&#x2011;18](#18)] | Contracts should have full test coverage | 1| 0|
-| [[N&#x2011;19](#19)] | Custom errors should be used rather than `revert()`/`require()` | 12| 0|
-| [[N&#x2011;20](#20)] | Duplicated `require()`/`revert()` checks should be refactored to a modifier or function | 1| 0|
-| [[N&#x2011;21](#21)] | Event is not properly `indexed` | 1| 0|
-| [[N&#x2011;22](#22)] | Events are missing sender information | 3| 0|
-| [[N&#x2011;23](#23)] | Events may be emitted out of order due to reentrancy | 8| 0|
-| [[N&#x2011;24](#24)] | Large multiples of ten should use scientific notation | 4| 0|
-| [[N&#x2011;25](#25)] | Large numeric literals should use underscores for readability | 6| 0|
-| [[N&#x2011;26](#26)] | Large or complicated code bases should implement invariant tests | 1| 0|
-| [[N&#x2011;27](#27)] | Memory-safe annotation preferred over comment variant | 1| 0|
-| [[N&#x2011;28](#28)] | Missing checks constructor/initializer assignments | 1| 0|
-| [[N&#x2011;29](#29)] | Missing event and or timelock for critical parameter change | 1| 0|
-| [[N&#x2011;30](#30)] | NatSpec: Contract declarations should have `@author` tags | 4| 0|
-| [[N&#x2011;31](#31)] | NatSpec: Contract declarations should have `@dev` tags | 4| 0|
-| [[N&#x2011;32](#32)] | NatSpec: Contract declarations should have `@notice` tags | 4| 0|
-| [[N&#x2011;33](#33)] | NatSpec: Contract declarations should have `@title` tags | 4| 0|
-| [[N&#x2011;34](#34)] | NatSpec: Contract declarations should have descriptions | 4| 0|
-| [[N&#x2011;35](#35)] | NatSpec: Event `@param` tag is missing | 38| 0|
-| [[N&#x2011;36](#36)] | NatSpec: Event declarations should have descriptions | 12| 0|
-| [[N&#x2011;37](#37)] | NatSpec: Function `@param` tag is missing | 11| 0|
-| [[N&#x2011;38](#38)] | NatSpec: Function `@return` tag is missing | 12| 0|
-| [[N&#x2011;39](#39)] | NatSpec: Function declarations should have `@notice` tags | 4| 0|
-| [[N&#x2011;40](#40)] | NatSpec: Function declarations should have descriptions | 4| 0|
-| [[N&#x2011;41](#41)] | NatSpec: Modifier declarations should have `@notice` tags | 1| 0|
-| [[N&#x2011;42](#42)] | NatSpec: Modifier declarations should have descriptions | 1| 0|
-| [[N&#x2011;43](#43)] | NatSpec: Public state variable declarations should have descriptions | 6| 0|
-| [[N&#x2011;44](#44)] | NatSpec: Use `@inheritdoc` to inherit the NatSpec of the base function | 2| 0|
-| [[N&#x2011;45](#45)] | Non-library/interface files should use fixed compiler versions, not floating ones | 2| 0|
-| [[N&#x2011;46](#46)] | Ownable contract never uses `onlyOwner` modifier | 1| 0|
-| [[N&#x2011;47](#47)] | Style guide: Contract names should use CamelCase | 2| 0|
-| [[N&#x2011;48](#48)] | Style guide: Function ordering does not follow the Solidity style guide | 3| 0|
-| [[N&#x2011;49](#49)] | Style guide: Lines are too long | 11| 0|
-| [[N&#x2011;50](#50)] | Style guide: Non-`external`/`public` function names should begin with an underscore | 1| 0|
-| [[N&#x2011;51](#51)] | Style guide: Variable names for `immutable`s should use CONSTANT_CASE | 2| 0|
-| [[N&#x2011;52](#52)] | Unused `public` contract variable | 1| 0|
-| [[N&#x2011;53](#53)] | Unused import | 1| 0|
-| [[N&#x2011;54](#54)] | Use of `override` is unnecessary | 2| 0|
-| [[N&#x2011;55](#55)] | Use the latest solidity (prior to 0.8.20 if on L2s) for deployment | 2| 0|
-| [[N&#x2011;56](#56)] | Using `>`/`>=` without specifying an upper bound is unsafe | 2| 0|
+| [[N&#x2011;01](#N-01)] | `address`es shouldn't be hard-coded | 3| 0|
+| [[N&#x2011;02](#N-02)] | `constant`s should be defined rather than using magic numbers | 14| 0|
+| [[N&#x2011;03](#N-03)] | `if`-statement can be converted to a ternary | 1| 0|
+| [[N&#x2011;04](#N-04)] | Assembly blocks should have extensive comments | 1| 0|
+| [[N&#x2011;05](#N-05)] | Avoid the use of sensitive terms | 32| 0|
+| [[N&#x2011;06](#N-06)] | Consider adding a block/deny-list | 2| 0|
+| [[N&#x2011;07](#N-07)] | Consider adding emergency-stop functionality | 3| 0|
+| [[N&#x2011;08](#N-08)] | Consider adding formal verification proofs | 1| 0|
+| [[N&#x2011;09](#N-09)] | Consider defining system-wide constants in a single file | 3| 0|
+| [[N&#x2011;10](#N-10)] | Consider disabling `renounceOwnership()` | 3| 0|
+| [[N&#x2011;11](#N-11)] | Consider making contracts `Upgradeable` | 4| 0|
+| [[N&#x2011;12](#N-12)] | Consider moving `msg.sender` checks to a common authorization `modifier` | 2| 0|
+| [[N&#x2011;13](#N-13)] | Consider using `delete` rather than assigning zero/false to clear values | 1| 0|
+| [[N&#x2011;14](#N-14)] | Consider using a `struct` rather than having many function input parameters | 1| 0|
+| [[N&#x2011;15](#N-15)] | Consider using named mappings | 10| 0|
+| [[N&#x2011;16](#N-16)] | Constants in comparisons should appear on the left side | 11| 0|
+| [[N&#x2011;17](#N-17)] | Contract should expose an `interface` | 18| 0|
+| [[N&#x2011;18](#N-18)] | Contracts should have full test coverage | 1| 0|
+| [[N&#x2011;19](#N-19)] | Custom errors should be used rather than `revert()`/`require()` | 12| 0|
+| [[N&#x2011;20](#N-20)] | Duplicated `require()`/`revert()` checks should be refactored to a modifier or function | 1| 0|
+| [[N&#x2011;21](#N-21)] | Event is not properly `indexed` | 1| 0|
+| [[N&#x2011;22](#N-22)] | Events are missing sender information | 3| 0|
+| [[N&#x2011;23](#N-23)] | Events may be emitted out of order due to reentrancy | 8| 0|
+| [[N&#x2011;24](#N-24)] | Large multiples of ten should use scientific notation | 4| 0|
+| [[N&#x2011;25](#N-25)] | Large numeric literals should use underscores for readability | 6| 0|
+| [[N&#x2011;26](#N-26)] | Large or complicated code bases should implement invariant tests | 1| 0|
+| [[N&#x2011;27](#N-27)] | Memory-safe annotation preferred over comment variant | 1| 0|
+| [[N&#x2011;28](#N-28)] | Missing checks constructor/initializer assignments | 1| 0|
+| [[N&#x2011;29](#N-29)] | Missing event and or timelock for critical parameter change | 1| 0|
+| [[N&#x2011;30](#N-30)] | NatSpec: Contract declarations should have `@author` tags | 4| 0|
+| [[N&#x2011;31](#N-31)] | NatSpec: Contract declarations should have `@dev` tags | 4| 0|
+| [[N&#x2011;32](#N-32)] | NatSpec: Contract declarations should have `@notice` tags | 4| 0|
+| [[N&#x2011;33](#N-33)] | NatSpec: Contract declarations should have `@title` tags | 4| 0|
+| [[N&#x2011;34](#N-34)] | NatSpec: Contract declarations should have descriptions | 4| 0|
+| [[N&#x2011;35](#N-35)] | NatSpec: Event `@param` tag is missing | 38| 0|
+| [[N&#x2011;36](#N-36)] | NatSpec: Event declarations should have descriptions | 12| 0|
+| [[N&#x2011;37](#N-37)] | NatSpec: Function `@param` tag is missing | 11| 0|
+| [[N&#x2011;38](#N-38)] | NatSpec: Function `@return` tag is missing | 12| 0|
+| [[N&#x2011;39](#N-39)] | NatSpec: Function declarations should have `@notice` tags | 4| 0|
+| [[N&#x2011;40](#N-40)] | NatSpec: Function declarations should have descriptions | 4| 0|
+| [[N&#x2011;41](#N-41)] | NatSpec: Modifier declarations should have `@notice` tags | 1| 0|
+| [[N&#x2011;42](#N-42)] | NatSpec: Modifier declarations should have descriptions | 1| 0|
+| [[N&#x2011;43](#N-43)] | NatSpec: Public state variable declarations should have descriptions | 6| 0|
+| [[N&#x2011;44](#N-44)] | NatSpec: Use `@inheritdoc` to inherit the NatSpec of the base function | 2| 0|
+| [[N&#x2011;45](#N-45)] | Non-library/interface files should use fixed compiler versions, not floating ones | 2| 0|
+| [[N&#x2011;46](#N-46)] | Ownable contract never uses `onlyOwner` modifier | 1| 0|
+| [[N&#x2011;47](#N-47)] | Style guide: Contract names should use CamelCase | 2| 0|
+| [[N&#x2011;48](#N-48)] | Style guide: Function ordering does not follow the Solidity style guide | 3| 0|
+| [[N&#x2011;49](#N-49)] | Style guide: Lines are too long | 11| 0|
+| [[N&#x2011;50](#N-50)] | Style guide: Non-`external`/`public` function names should begin with an underscore | 1| 0|
+| [[N&#x2011;51](#N-51)] | Style guide: Variable names for `immutable`s should use CONSTANT_CASE | 2| 0|
+| [[N&#x2011;52](#N-52)] | Unused `public` contract variable | 1| 0|
+| [[N&#x2011;53](#N-53)] | Unused import | 1| 0|
+| [[N&#x2011;54](#N-54)] | Use of `override` is unnecessary | 2| 0|
+| [[N&#x2011;55](#N-55)] | Use the latest solidity (prior to 0.8.20 if on L2s) for deployment | 2| 0|
+| [[N&#x2011;56](#N-56)] | Using `>`/`>=` without specifying an upper bound is unsafe | 2| 0|
 | |Issue|Instances| Gas Savings
 |-|:-|:-:|:-:|
-| [[D&#x2011;01](#01)] | ~~`approve()`/`safeApprove()` may revert if the current approval is not zero~~ | 1| 0|
-| [[D&#x2011;02](#02)] | ~~Avoid updating storage when the value hasn't changed~~ | 2| 0|
-| [[D&#x2011;03](#03)] | ~~Avoid Zero to Non-Zero Storage Writes Where Possible~~ | 2| 0|
-| [[D&#x2011;04](#04)] | ~~Bad bot rules~~ | 2| 0|
-| [[D&#x2011;05](#05)] | ~~Consider adding a block/deny-list~~ | 2| 0|
-| [[D&#x2011;06](#06)] | ~~Constant decimal values~~ | 3| 0|
-| [[D&#x2011;07](#07)] | ~~Constant redefined elsewhere~~ | 1| 0|
-| [[D&#x2011;08](#08)] | ~~Contracts do not work with fee-on-transfer tokens~~ | 1| 0|
-| [[D&#x2011;09](#09)] | ~~Control structures do not follow the Solidity Style Guide~~ | 2| 0|
-| [[D&#x2011;10](#10)] | ~~Default `bool` values are manually reset~~ | 1| 0|
-| [[D&#x2011;11](#11)] | ~~Duplicated `require()`/`revert()` checks should be refactored to a modifier or function~~ | 10| 0|
-| [[D&#x2011;12](#12)] | ~~Duplicated require()/revert() checks should be refactored to a modifier Or function to save gas~~ | 1| 0|
-| [[D&#x2011;13](#13)] | ~~Enable IR-based code generation~~ | 1| 0|
-| [[D&#x2011;14](#14)] | ~~Event names should use CamelCase~~ | 12| 0|
-| [[D&#x2011;15](#15)] | ~~Events that mark critical parameter changes should contain both the old and the new value~~ | 11| 0|
-| [[D&#x2011;16](#16)] | ~~Inconsistent comment spacing~~ | 4| 0|
-| [[D&#x2011;17](#17)] | ~~It is standard for all external and public functions to be override from an interface~~ | 2| 0|
-| [[D&#x2011;18](#18)] | ~~It's not standard to end and begin a code object on the same line~~ | 11| 0|
-| [[D&#x2011;19](#19)] | ~~Large approvals may not work with some ERC20 tokens~~ | 1| 0|
-| [[D&#x2011;20](#20)] | ~~Loss of precision~~ | 1| 0|
-| [[D&#x2011;21](#21)] | ~~Low level calls with Solidity before 0.8.14 result in an optimiser bug~~ | 1| 0|
-| [[D&#x2011;22](#22)] | ~~Missing checks for state variable assignments~~ | 5| 0|
-| [[D&#x2011;23](#23)] | ~~Missing event and or timelock for critical parameter change~~ | 6| 0|
-| [[D&#x2011;24](#24)] | ~~Must approve or increase allowance first~~ | 4| 0|
-| [[D&#x2011;25](#25)] | ~~NatSpec: Function declarations should have `@notice` tags~~ | 20| 0|
-| [[D&#x2011;26](#26)] | ~~Not using the named return variables anywhere in the function is confusing~~ | 1| 0|
-| [[D&#x2011;27](#27)] | ~~Re-org attack~~ | 1| 0|
-| [[D&#x2011;28](#28)] | ~~Reduce gas usage by moving to Solidity 0.8.19 or later~~ | 2| 0|
-| [[D&#x2011;29](#29)] | ~~Return values of transfer()/transferFrom() not checked~~ | 1| 0|
-| [[D&#x2011;30](#30)] | ~~Revert on transfer to the zero address~~ | 13| 0|
-| [[D&#x2011;31](#31)] | ~~safeMint should be used in place of mint~~ | 1| 0|
-| [[D&#x2011;32](#32)] | ~~Setters should prevent re-setting of the same value~~ | 2| 0|
-| [[D&#x2011;33](#33)] | ~~Solidity version 0.8.20 may not work on other chains due to `PUSH0`~~ | 2| 0|
-| [[D&#x2011;34](#34)] | ~~SPDX identifier should be the in the first line of a solidity file~~ | 4| 0|
-| [[D&#x2011;35](#35)] | ~~State variable read in a loop~~ | 1| 0|
-| [[D&#x2011;36](#36)] | ~~Storage Write Removal Bug On Conditional Early Termination~~ | 1| 0|
-| [[D&#x2011;37](#37)] | ~~Style guide: Contract does not follow the Solidity style guide's suggested layout ordering~~ | 4| 0|
-| [[D&#x2011;38](#38)] | ~~Style guide: Function Names Not in mixedCase~~ | 2| 0|
-| [[D&#x2011;39](#39)] | ~~Style guide: Function names should use lowerCamelCase~~ | 1| 0|
-| [[D&#x2011;40](#40)] | ~~Tokens may be minted to `address(0x0)`~~ | 1| 0|
-| [[D&#x2011;41](#41)] | ~~Top level pragma declarations should be separated by two blank lines~~ | 4| 0|
-| [[D&#x2011;42](#42)] | ~~Top-level declarations should be separated by at least two lines~~ | 4| 0|
-| [[D&#x2011;43](#43)] | ~~Trade-offs Between Modifiers and Internal Functions~~ | 1| 0|
-| [[D&#x2011;44](#44)] | ~~Unnecessary look up in if condition~~ | 5| 0|
-| [[D&#x2011;45](#45)] | ~~Unused function parameter~~ | 1| 0|
-| [[D&#x2011;46](#46)] | ~~Unused import~~ | 18| 0|
-| [[D&#x2011;47](#47)] | ~~Unusual loop variable~~ | 1| 0|
-| [[D&#x2011;48](#48)] | ~~Use != 0 instead of > 0 for unsigned integer comparison~~ | 4| 0|
-| [[D&#x2011;49](#49)] | ~~Use `_safeMint` instead of `_mint` for ERC721~~ | 3| 0|
-| [[D&#x2011;50](#50)] | ~~Use `assembly` to write address/contract type storage values~~ | 5| 0|
-| [[D&#x2011;51](#51)] | ~~Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes~~ | 1| 0|
-| [[D&#x2011;52](#52)] | ~~Use assembly to emit events, in order to save gas~~ | 10| 0|
-| [[D&#x2011;53](#53)] | ~~Use delete instead of setting mapping/state variable to zero, to save gas~~ | 2| 0|
-| [[D&#x2011;54](#54)] | ~~Use of a single-step ownership transfer~~ | 1| 0|
-| [[D&#x2011;55](#55)] | ~~Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas~~ | 1| 0|
-| [[D&#x2011;56](#56)] | ~~Using bitmap to store bool states can save gas~~ | 3| 0|
- **Note:** There is a section for disputed findings below the usual findings sections ### Medium Risk Issues <a name="01"></a>
+| [[D&#x2011;01](#D-01)] | ~~`approve()`/`safeApprove()` may revert if the current approval is not zero~~ | 1| 0|
+| [[D&#x2011;02](#D-02)] | ~~Avoid updating storage when the value hasn't changed~~ | 2| 0|
+| [[D&#x2011;03](#D-03)] | ~~Avoid Zero to Non-Zero Storage Writes Where Possible~~ | 2| 0|
+| [[D&#x2011;04](#D-04)] | ~~Bad bot rules~~ | 2| 0|
+| [[D&#x2011;05](#D-05)] | ~~Consider adding a block/deny-list~~ | 2| 0|
+| [[D&#x2011;06](#D-06)] | ~~Constant decimal values~~ | 3| 0|
+| [[D&#x2011;07](#D-07)] | ~~Constant redefined elsewhere~~ | 1| 0|
+| [[D&#x2011;08](#D-08)] | ~~Contracts do not work with fee-on-transfer tokens~~ | 1| 0|
+| [[D&#x2011;09](#D-09)] | ~~Control structures do not follow the Solidity Style Guide~~ | 2| 0|
+| [[D&#x2011;10](#D-10)] | ~~Default `bool` values are manually reset~~ | 1| 0|
+| [[D&#x2011;11](#D-11)] | ~~Duplicated `require()`/`revert()` checks should be refactored to a modifier or function~~ | 10| 0|
+| [[D&#x2011;12](#D-12)] | ~~Duplicated require()/revert() checks should be refactored to a modifier Or function to save gas~~ | 1| 0|
+| [[D&#x2011;13](#D-13)] | ~~Enable IR-based code generation~~ | 1| 0|
+| [[D&#x2011;14](#D-14)] | ~~Event names should use CamelCase~~ | 12| 0|
+| [[D&#x2011;15](#D-15)] | ~~Events that mark critical parameter changes should contain both the old and the new value~~ | 11| 0|
+| [[D&#x2011;16](#D-16)] | ~~Inconsistent comment spacing~~ | 4| 0|
+| [[D&#x2011;17](#D-17)] | ~~It is standard for all external and public functions to be override from an interface~~ | 2| 0|
+| [[D&#x2011;18](#D-18)] | ~~It's not standard to end and begin a code object on the same line~~ | 11| 0|
+| [[D&#x2011;19](#D-19)] | ~~Large approvals may not work with some ERC20 tokens~~ | 1| 0|
+| [[D&#x2011;20](#D-20)] | ~~Loss of precision~~ | 1| 0|
+| [[D&#x2011;21](#D-21)] | ~~Low level calls with Solidity before 0.8.14 result in an optimiser bug~~ | 1| 0|
+| [[D&#x2011;22](#D-22)] | ~~Missing checks for state variable assignments~~ | 5| 0|
+| [[D&#x2011;23](#D-23)] | ~~Missing event and or timelock for critical parameter change~~ | 6| 0|
+| [[D&#x2011;24](#D-24)] | ~~Must approve or increase allowance first~~ | 4| 0|
+| [[D&#x2011;25](#D-25)] | ~~NatSpec: Function declarations should have `@notice` tags~~ | 20| 0|
+| [[D&#x2011;26](#D-26)] | ~~Not using the named return variables anywhere in the function is confusing~~ | 1| 0|
+| [[D&#x2011;27](#D-27)] | ~~Re-org attack~~ | 1| 0|
+| [[D&#x2011;28](#D-28)] | ~~Reduce gas usage by moving to Solidity 0.8.19 or later~~ | 2| 0|
+| [[D&#x2011;29](#D-29)] | ~~Return values of transfer()/transferFrom() not checked~~ | 1| 0|
+| [[D&#x2011;30](#D-30)] | ~~Revert on transfer to the zero address~~ | 13| 0|
+| [[D&#x2011;31](#D-31)] | ~~safeMint should be used in place of mint~~ | 1| 0|
+| [[D&#x2011;32](#D-32)] | ~~Setters should prevent re-setting of the same value~~ | 2| 0|
+| [[D&#x2011;33](#D-33)] | ~~Solidity version 0.8.20 may not work on other chains due to `PUSH0`~~ | 2| 0|
+| [[D&#x2011;34](#D-34)] | ~~SPDX identifier should be the in the first line of a solidity file~~ | 4| 0|
+| [[D&#x2011;35](#D-35)] | ~~State variable read in a loop~~ | 1| 0|
+| [[D&#x2011;36](#D-36)] | ~~Storage Write Removal Bug On Conditional Early Termination~~ | 1| 0|
+| [[D&#x2011;37](#D-37)] | ~~Style guide: Contract does not follow the Solidity style guide's suggested layout ordering~~ | 4| 0|
+| [[D&#x2011;38](#D-38)] | ~~Style guide: Function Names Not in mixedCase~~ | 2| 0|
+| [[D&#x2011;39](#D-39)] | ~~Style guide: Function names should use lowerCamelCase~~ | 1| 0|
+| [[D&#x2011;40](#D-40)] | ~~Tokens may be minted to `address(0x0)`~~ | 1| 0|
+| [[D&#x2011;41](#D-41)] | ~~Top level pragma declarations should be separated by two blank lines~~ | 4| 0|
+| [[D&#x2011;42](#D-42)] | ~~Top-level declarations should be separated by at least two lines~~ | 4| 0|
+| [[D&#x2011;43](#D-43)] | ~~Trade-offs Between Modifiers and Internal Functions~~ | 1| 0|
+| [[D&#x2011;44](#D-44)] | ~~Unnecessary look up in if condition~~ | 5| 0|
+| [[D&#x2011;45](#D-45)] | ~~Unused function parameter~~ | 1| 0|
+| [[D&#x2011;46](#D-46)] | ~~Unused import~~ | 18| 0|
+| [[D&#x2011;47](#D-47)] | ~~Unusual loop variable~~ | 1| 0|
+| [[D&#x2011;48](#D-48)] | ~~Use != 0 instead of > 0 for unsigned integer comparison~~ | 4| 0|
+| [[D&#x2011;49](#D-49)] | ~~Use `_safeMint` instead of `_mint` for ERC721~~ | 3| 0|
+| [[D&#x2011;50](#D-50)] | ~~Use `assembly` to write address/contract type storage values~~ | 5| 0|
+| [[D&#x2011;51](#D-51)] | ~~Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes~~ | 1| 0|
+| [[D&#x2011;52](#D-52)] | ~~Use assembly to emit events, in order to save gas~~ | 10| 0|
+| [[D&#x2011;53](#D-53)] | ~~Use delete instead of setting mapping/state variable to zero, to save gas~~ | 2| 0|
+| [[D&#x2011;54](#D-54)] | ~~Use of a single-step ownership transfer~~ | 1| 0|
+| [[D&#x2011;55](#D-55)] | ~~Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas~~ | 1| 0|
+| [[D&#x2011;56](#D-56)] | ~~Using bitmap to store bool states can save gas~~ | 3| 0|
+ **Note:** There is a section for disputed findings below the usual findings sections ### Medium Risk Issues
 
 
-### [M&#x2011;01] The `owner` is a single point of failure and a centralization risk
+### [M&#x2011;01]<a name="M-01"></a> The `owner` is a single point of failure and a centralization risk
 Having a single EOA as the only owner of contracts is a large centralization risk and a single point of failure. A single private key may be taken in a hack, or the sole holder of the key may become unable to retrieve the key when necessary, or the single owner can become malicious and perform a rug-pull. Consider changing to a multi-signature setup, and or having a role-based authorization model.
 
 *There are 5 instance(s) of this issue:*
@@ -190,10 +190,10 @@ File: src/asD.sol
 ```
 
 
-*GitHub* : [72](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L72-L72)### Low Risk Issues <a name="01"></a>
+*GitHub* : [72](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L72-L72)### Low Risk Issues
 
 
-### [L&#x2011;01] `safeApprove()` is deprecated
+### [L&#x2011;01]<a name="L-01"></a> `safeApprove()` is deprecated
 [Deprecated](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/bfff03c0d2a59bcd8e2ead1da9aed9edf0080d05/contracts/token/ERC20/utils/SafeERC20.sol#L38-L45) in favor of `safeIncreaseAllowance()` and `safeDecreaseAllowance()`. If only setting the initial allowance to the value that means infinite, `safeIncreaseAllowance()` can be used instead. The function may currently work, but if a bug is found in this version of OpenZeppelin, and the version that you're forced to upgrade to no longer has this function, you'll encounter unnecessary delays in porting and testing replacement contracts.
 
 *There are 1 instance(s) of this issue:*
@@ -207,7 +207,7 @@ File: src/asD.sol
 
 
 *GitHub* : [51](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L51)
-### [L&#x2011;02] Code does not follow the best practice of check-effects-interaction
+### [L&#x2011;02]<a name="L-02"></a> Code does not follow the best practice of check-effects-interaction
 Code should follow the best-practice of [check-effects-interaction](https://blockchain-academy.hs-mittweida.de/courses/solidity-coding-beginners-to-intermediate/lessons/solidity-11-coding-patterns/topic/checks-effects-interactions/), where state variables are updated before any external calls are made. Doing so prevents a large class of reentrancy bugs.
 
 *There are 10 instance(s) of this issue:*
@@ -249,7 +249,7 @@ File: src/Market.sol
 
 
 *GitHub* : [159](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L159-L159),[161](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L161-L161),[162](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L162-L162),[163](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L163-L163),[210](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L210-L210),[211](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L211-L211),[212](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L212-L212),[233](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L233-L233),[234](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L234-L234),[235](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L235-L235)
-### [L&#x2011;03] Consider implementing two-step procedure for updating protocol addresses
+### [L&#x2011;03]<a name="L-03"></a> Consider implementing two-step procedure for updating protocol addresses
 A copy-paste error or a typo may end up bricking protocol functionality, or sending tokens to an address with no known private key. Consider implementing a two-step procedure for updating protocol addresses, where the recipient is set as pending, and must 'accept' the assignment by making an affirmative call. A straight forward way of doing this would be to have the target contracts implement [EIP-165](https://eips.ethereum.org/EIPS/eip-165), and to have the 'set' functions ensure that the recipient is of the right interface type.
 
 *There are 2 instance(s) of this issue:*
@@ -272,7 +272,7 @@ File: src/Market.sol
 
 
 *GitHub* : [104](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L104-L108),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309-L312)
-### [L&#x2011;04] Local variable shadows state variable
+### [L&#x2011;04]<a name="L-04"></a> Local variable shadows state variable
 
 *There are 4 instance(s) of this issue:*
 
@@ -303,7 +303,7 @@ File: src/asD.sol
 
 
 *GitHub* : [29](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L29-L29),[30](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L30-L30),[31](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L31-L31)
-### [L&#x2011;05] Loss of precision
+### [L&#x2011;05]<a name="L-05"></a> Loss of precision
 Division by large numbers may result in the result being zero, due to solidity not supporting fractions. Consider requiring a minimum amount for the numerator to ensure that it is always larger than the denominator
 
 *There are 1 instance(s) of this issue:*
@@ -318,7 +318,7 @@ File: src/Market.sol
 
 
 *GitHub* : [290](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L290-L290)
-### [L&#x2011;06] Missing checks for `address(0x0)` in the constructor
+### [L&#x2011;06]<a name="L-06"></a> Missing checks for `address(0x0)` in the constructor
 
 *There are 3 instance(s) of this issue:*
 
@@ -354,7 +354,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [25](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L25-L25)
-### [L&#x2011;07] Missing checks for `address(0x0)` when updating `address` state variables
+### [L&#x2011;07]<a name="L-07"></a> Missing checks for `address(0x0)` when updating `address` state variables
 
 *There are 1 instance(s) of this issue:*
 
@@ -368,7 +368,7 @@ File: src/Market.sol
 
 
 *GitHub* : [123](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L123-L123)
-### [L&#x2011;08] Use of `tx.origin` is unsafe in almost every context
+### [L&#x2011;08]<a name="L-08"></a> Use of `tx.origin` is unsafe in almost every context
 According to [Vitalik Buterin](https://ethereum.stackexchange.com/questions/196/how-do-i-make-my-dapp-serenity-proof), contracts should _not_ `assume that tx.origin will continue to be usable or meaningful`. An example of this is [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074#allowing-txorigin-as-signer-1) which explicitly mentions the intention to change its semantics when it's used with new op codes. There have also been calls to [remove](https://github.com/ethereum/solidity/issues/683) `tx.origin`, and there are [security issues](solidity.readthedocs.io/en/v0.4.24/security-considerations.html#tx-origin) associated with using it for authorization. For these reasons, it's best to completely avoid the feature.
 
 *There are 2 instance(s) of this issue:*
@@ -393,10 +393,10 @@ File: src/asDFactory.sol
 ```
 
 
-*GitHub* : [28](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L28-L29)### Gas Risk Issues <a name="01"></a>
+*GitHub* : [28](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L28-L29)### Gas Risk Issues
 
 
-### [G&#x2011;01] Assembly: Use scratch space for building calldata
+### [G&#x2011;01]<a name="G-01"></a> Assembly: Use scratch space for building calldata
 If an external call's calldata can fit into two or fewer words, use the scratch space to build the calldata, rather than allowing Solidity to do a memory expansion.
 
 *There are 7 instance(s) of this issue:*
@@ -438,7 +438,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [29](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L29-L29)
-### [G&#x2011;02] `++i`/`i++` should be `unchecked{++i}`/`unchecked{i++}` when it is not possible for them to overflow, as is the case when used in `for`- and `while`-loops
+### [G&#x2011;02]<a name="G-02"></a> `++i`/`i++` should be `unchecked{++i}`/`unchecked{i++}` when it is not possible for them to overflow, as is the case when used in `for`- and `while`-loops
 The `unchecked` keyword is new in solidity version 0.8.0, so this only applies to that version or higher, which these instances are. This saves **30-40 gas [per loop](https://gist.github.com/hrkrshnn/ee8fabd532058307229d65dcd5836ddc#the-increment-in-for-loop-post-condition-can-be-made-unchecked)**
 
 *There are 1 instance(s) of this issue:*
@@ -452,7 +452,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L20)
-### [G&#x2011;03] Assembly: Check `msg.sender` using `xor` and the scratch space
+### [G&#x2011;03]<a name="G-03"></a> Assembly: Check `msg.sender` using `xor` and the scratch space
 See [this](https://code4rena.com/reports/2023-05-juicebox#g-06-use-assembly-to-validate-msgsender) prior finding for details on the conversion
 
 *There are 3 instance(s) of this issue:*
@@ -473,7 +473,7 @@ File: src/Market.sol
 
 
 *GitHub* : [81](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L81-L84),[151](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L151-L151),[254](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L254-L254)
-### [G&#x2011;04] Consider using solady's `FixedPointMathLib`
+### [G&#x2011;04]<a name="G-04"></a> Consider using solady's `FixedPointMathLib`
 Saves gas, and works to avoid unnecessary [overflows](https://github.com/Vectorized/solady/blob/6cce088e69d6e46671f2f622318102bd5db77a65/src/utils/FixedPointMathLib.sol#L267).
 
 *There are 7 instance(s) of this issue:*
@@ -517,7 +517,7 @@ File: src/asD.sol
 
 
 *GitHub* : [75](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L75-L76)
-### [G&#x2011;05] Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes
+### [G&#x2011;05]<a name="G-05"></a> Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes
 Avoids a Gsset (**20000 gas**) when changing from `false` to `true`, after having been `true` in the past. Since most of the bools aren't changed twice in one transaction, I've counted the amount of gas as half of the full amount, for each variable. Note that public state variables can be re-written to be `private` and use `uint256`, but have public getters returning `bool`s.
 
 *There are 3 instance(s) of this issue:*
@@ -538,7 +538,7 @@ File: src/Market.sol
 
 
 *GitHub* : [49](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L49-L49),[61](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L61-L61),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L64-L64)
-### [G&#x2011;06] State variables only set in the constructor should be declared `immutable`
+### [G&#x2011;06]<a name="G-06"></a> State variables only set in the constructor should be declared `immutable`
 Avoids a Gsset (**20000 gas**) in the constructor, and replaces the first access in each transaction (Gcoldsload - **2100 gas**) and each access thereafter (Gwarmacces - **100 gas**) with a `PUSH32` (**3 gas**). 
 
 While `string`s are not value types, and therefore cannot be `immutable`/`constant` if not hard-coded outside of the constructor, the same behavior can be achieved by making the current contract `abstract` with `virtual` functions for the `string` accessors, and having a child contract override the functions with the hard-coded implementation-specific values.
@@ -554,7 +554,7 @@ File: src/Market.sol
 
 
 *GitHub* : [27](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L27-L27)
-### [G&#x2011;07] Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas
+### [G&#x2011;07]<a name="G-07"></a> Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas
 When a function with a `memory` array is called externally, the `abi.decode()` step has to copy read each index of the `calldata` to `memory`. **Each copy costs at least 60 gas** (i.e. `60 * <mem_array>.length`). Using `calldata` directly, obviates the need for copies of words of the struct/array not being read. Note that even if an interface defines a function as having `memory` arguments, it's still valid for implementation contracts to use `calldata` arguments instead. 
 
 If the array is passed to an `internal` function which passes the array to another internal function where the array is modified and therefore `memory` is used in the `external` call, it's still more gass-efficient to use `calldata` when the `external` function uses modifiers, since the modifiers may prevent the internal functions from being called. Structs have the same overhead as an array of length one
@@ -585,7 +585,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33),[33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [G&#x2011;08] Avoid transferring amounts of zero in order to save gas
+### [G&#x2011;08]<a name="G-08"></a> Avoid transferring amounts of zero in order to save gas
 Skipping the external call when nothing will be transferred, will save at least **100 gas**
 
 *There are 9 instance(s) of this issue:*
@@ -623,7 +623,7 @@ File: src/asD.sol
 
 
 *GitHub* : [50](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L50-L50),[66](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L66-L66)
-### [G&#x2011;09] Avoid contract existence checks by using low-level calls
+### [G&#x2011;09]<a name="G-09"></a> Avoid contract existence checks by using low-level calls
 Prior to 0.8.10 the compiler inserted extra code, including `EXTCODESIZE` (**100 gas**), to check for contract existence for external function calls. In more recent solidity versions, the compiler will not insert these checks if the external call has a return value. Similar behavior can be achieved in earlier versions by using low-level calls, since low-level calls never check for contract existence. Note that it [still](https://gist.github.com/IllIllI000/fbd5861a8e587cb1c1aab55a106bb9a7) saves gas, even if the return value is not directly used.
 
 *There are 7 instance(s) of this issue:*
@@ -657,7 +657,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [29](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L29-L29)
-### [G&#x2011;10] Using `bool`s for storage incurs overhead
+### [G&#x2011;10]<a name="G-10"></a> Using `bool`s for storage incurs overhead
 ```solidity
 // Booleans are more expensive than uint256 or any type that takes up a full
 // word because each write operation emits an extra SLOAD to first read the
@@ -693,7 +693,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L15-L15)
-### [G&#x2011;11] Multiple accesses of a mapping/array should use a local variable cache
+### [G&#x2011;11]<a name="G-11"></a> Multiple accesses of a mapping/array should use a local variable cache
 The instances below point to the second+ access of a value inside a mapping/array, within a function. Caching a mapping's value in a local `storage` or `calldata` variable when the value is accessed [multiple times](https://gist.github.com/IllIllI000/ec23a57daa30a8f8ca8b9681c8ccefb0), saves **~42 gas per access** due to not having to recalculate the key's keccak256 hash (Gkeccak256 - **30 gas**) and that calculation's associated stack operations. Caching an array's struct avoids recalculating the array offsets into memory/calldata
 
 *There are 19 instance(s) of this issue:*
@@ -762,7 +762,7 @@ File: src/Market.sol
 
 
 *GitHub* : [124](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L124),[125](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L125),[135](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L135),[144](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L144),[158](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L158),[159](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L159),[161](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L161),[162](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L162),[180](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L180),[182](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L182),[183](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L183),[196](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L196),[210](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L210),[212](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L212),[233](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L233),[235](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L235),[255](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L255),[256](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L256),[290](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L290)
-### [G&#x2011;12] Optimize names to save gas
+### [G&#x2011;12]<a name="G-12"></a> Optimize names to save gas
 `public`/`external` function names and `public` member variable names can be optimized to save gas. See [this](https://gist.github.com/IllIllI000/a5d8b486a8259f9f77891a919febd1a9) link for an example of how it works. Below are the interfaces/abstract contracts that can be optimized so that the most frequently-called functions use the least amount of gas possible during method lookup. Method IDs that have two leading zero bytes can save **128 gas** each during deployment, and renaming functions to have lower method IDs will save **22 gas** per call, [per sorted position shifted](https://medium.com/joyso/solidity-how-does-function-name-affect-gas-consumption-in-smart-contract-47d270d8ac92)
 
 *There are 1 instance(s) of this issue:*
@@ -777,7 +777,7 @@ File: src/Market.sol
 
 
 *GitHub* : [10](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L10)
-### [G&#x2011;13] Functions guaranteed to revert when called by normal users can be marked `payable`
+### [G&#x2011;13]<a name="G-13"></a> Functions guaranteed to revert when called by normal users can be marked `payable`
 If a function modifier such as `onlyOwner` is used, the function will revert if a normal user tries to pay the function. Marking the function as `payable` will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided. The extra opcodes avoided are 
 `CALLVALUE`(2),`DUP1`(3),`ISZERO`(3),`PUSH2`(3),`JUMPI`(10),`PUSH1`(3),`DUP1`(3),`REVERT`(0),`JUMPDEST`(1),`POP`(2), which costs an average of about **21 gas per call** to the function, in addition to the extra deployment cost
 
@@ -814,7 +814,7 @@ File: src/asD.sol
 
 
 *GitHub* : [72](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L72)
-### [G&#x2011;14] Constructors can be marked `payable`
+### [G&#x2011;14]<a name="G-14"></a> Constructors can be marked `payable`
 Payable functions cost less gas to execute, since the compiler does not have to add extra checks to ensure that a payment wasn't provided. A constructor can safely be marked as payable, since only the deployer would be able to pass funds, and the project itself would not pass any funds.
 
 *There are 4 instance(s) of this issue:*
@@ -864,7 +864,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [24](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L24)
-### [G&#x2011;15] `unchecked {}`  can be used on the division of two `uint`s in order to save gas
+### [G&#x2011;15]<a name="G-15"></a> `unchecked {}`  can be used on the division of two `uint`s in order to save gas
 The division cannot overflow, since both the numerator and the denominator are non-negative
 
 *There are 1 instance(s) of this issue:*
@@ -878,7 +878,7 @@ File: src/Market.sol
 
 
 *GitHub* : [290](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L290-L290)
-### [G&#x2011;16] Assembly: Use scratch space when building emitted events with two data arguments
+### [G&#x2011;16]<a name="G-16"></a> Assembly: Use scratch space when building emitted events with two data arguments
 Using the [scratch space](https://gist.github.com/IllIllI000/87c4f03139fa03780fa548b8e4b02b5b) for more than one, but at most two words worth of data (non-indexed arguments) will save gas over needing Solidity's abi memory expansion used for emitting normally.
 
 *There are 2 instance(s) of this issue:*
@@ -894,7 +894,7 @@ File: src/Market.sol
 
 
 *GitHub* : [220](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L220-L220),[240](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L240-L240)
-### [G&#x2011;17] `x += y` costs more gas than `x = x + y` for basic-typed state variables
+### [G&#x2011;17]<a name="G-17"></a> `x += y` costs more gas than `x = x + y` for basic-typed state variables
 Using the addition operator instead of plus-equals saves **[10 gas](https://gist.github.com/IllIllI000/cbbfb267425b898e5be734d4008d4fe8)** because of extra `PUSH`es and `POP`s associated with the manipulation of the state variable when using `+=` for basic-typed state variables
 
 *There are 1 instance(s) of this issue:*
@@ -908,7 +908,7 @@ File: src/Market.sol
 
 
 *GitHub* : [295](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L295-L295)
-### [G&#x2011;18] `++i` costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too)
+### [G&#x2011;18]<a name="G-18"></a> `++i` costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too)
 Saves **5 gas per loop**
 
 *There are 1 instance(s) of this issue:*
@@ -922,7 +922,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L20)
-### [G&#x2011;19] `>=` costs less gas than `>`
+### [G&#x2011;19]<a name="G-19"></a> `>=` costs less gas than `>`
 The compiler uses opcodes `GT` and `ISZERO` for solidity code that uses `>`, but only requires `LT` for `>=`, [which saves **3 gas**](https://gist.github.com/IllIllI000/3dc79d25acccfa16dee4e83ffdc6ffde). If `<` is being used, the condition can be inverted.
 
 *There are 5 instance(s) of this issue:*
@@ -967,7 +967,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [29](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L29-L33)
-### [G&#x2011;20] Inline `modifier`s that are only used once, to save gas
+### [G&#x2011;20]<a name="G-20"></a> Inline `modifier`s that are only used once, to save gas
 
 *There are 1 instance(s) of this issue:*
 
@@ -986,7 +986,7 @@ File: src/Market.sol
 
 
 *GitHub* : [80](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L80-L86)
-### [G&#x2011;21] Reduce deployment costs by tweaking contracts' metadata
+### [G&#x2011;21]<a name="G-21"></a> Reduce deployment costs by tweaking contracts' metadata
 See [this](https://www.rareskills.io/post/solidity-metadata) link, at its bottom, for full details
 
 *There are 4 instance(s) of this issue:*
@@ -1040,7 +1040,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [G&#x2011;22] Reduce gas usage by moving to Solidity 0.8.19 or later
+### [G&#x2011;22]<a name="G-22"></a> Reduce gas usage by moving to Solidity 0.8.19 or later
 See [this](https://blog.soliditylang.org/2023/02/22/solidity-0.8.19-release-announcement/#preventing-dead-code-in-runtime-bytecode) link for the full details. Additionally, every new release has new optimizations, which will save gas.
 
 *There are 2 instance(s) of this issue:*
@@ -1064,7 +1064,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L2)
-### [G&#x2011;23] Remove or replace unused state variables
+### [G&#x2011;23]<a name="G-23"></a> Remove or replace unused state variables
 Saves a storage slot. If the variable is assigned a non-zero value, saves Gsset (**20000 gas**). If it's assigned a zero value, saves Gsreset (**2900 gas**). If the variable remains unassigned, there is no gas savings unless the variable is `public`, in which case the compiler-generated non-payable getter deployment cost is saved. If the state variable is overriding an interface's public function, mark the variable as `constant` or `immutable` so that it does not use a storage slot
 
 *There are 1 instance(s) of this issue:*
@@ -1078,7 +1078,7 @@ File: src/Market.sol
 
 
 *GitHub* : [46](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L46)
-### [G&#x2011;24] Use custom errors rather than `revert()`/`require()` strings to save gas
+### [G&#x2011;24]<a name="G-24"></a> Use custom errors rather than `revert()`/`require()` strings to save gas
 Custom errors are available from solidity version 0.8.4. Custom errors save [**~50 gas**](https://gist.github.com/IllIllI000/ad1bd0d29a0101b25e57c293b4b0c746) each time they're hit by [avoiding having to allocate and store the revert string](https://blog.soliditylang.org/2021/04/21/custom-errors/#errors-in-depth). Not defining the strings also save deployment gas
 
 *There are 12 instance(s) of this issue:*
@@ -1125,7 +1125,7 @@ File: src/asD.sol
 
 
 *GitHub* : [54](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L54),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L64),[81](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L81),[86](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L86)
-### [G&#x2011;25] Using `private` rather than `public`, saves gas
+### [G&#x2011;25]<a name="G-25"></a> Using `private` rather than `public`, saves gas
 For constants, the values can be read from the verified contract source code, or if there are multiple values there can be a single getter function that [returns a tuple](https://github.com/code-423n4/2022-08-frax/blob/90f55a9ce4e25bceed3a74290b854341d8de6afa/src/contracts/FraxlendPair.sol#L156-L178) of the values of all currently-public constants. Saves **3406-3606 gas** in deployment gas due to the compiler not having to create non-payable getter functions for deployment calldata, not having to store the bytes of the value outside of where it's used, and not adding another entry to the method ID table
 
 *There are 18 instance(s) of this issue:*
@@ -1196,10 +1196,10 @@ File: src/asDFactory.sol
 ```
 
 
-*GitHub* : [12](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L12-L12),[15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L15-L15)### NonCritical Risk Issues <a name="01"></a>
+*GitHub* : [12](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L12-L12),[15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L15-L15)### NonCritical Risk Issues
 
 
-### [N&#x2011;01] `address`es shouldn't be hard-coded
+### [N&#x2011;01]<a name="N-01"></a> `address`es shouldn't be hard-coded
 It is often better to declare `address`es as `immutable`, and assign them via constructor arguments. This allows the code to remain the same across deployments on different networks, and avoids recompilation when addresses need to change.
 
 *There are 3 instance(s) of this issue:*
@@ -1233,7 +1233,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [28](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L28-L28)
-### [N&#x2011;02] `constant`s should be defined rather than using magic numbers
+### [N&#x2011;02]<a name="N-02"></a> `constant`s should be defined rather than using magic numbers
 Even [assembly](https://github.com/code-423n4/2022-05-opensea-seaport/blob/9d7ce4d08bf3c3010304a0476a785c70c0e90ae7/contracts/lib/TokenTransferrer.sol#L35-L39) can benefit from using readable constants instead of hex/numeric literals
 
 *There are 14 instance(s) of this issue:*
@@ -1297,7 +1297,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26),[26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26)
-### [N&#x2011;03] `if`-statement can be converted to a ternary
+### [N&#x2011;03]<a name="N-03"></a> `if`-statement can be converted to a ternary
 The code can be made more compact while also increasing readability by converting the following `if`-statements to ternaries (e.g. `foo += (x > y) ? a : b`)
 
 *There are 1 instance(s) of this issue:*
@@ -1315,7 +1315,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [29](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L29-L33)
-### [N&#x2011;04] Assembly blocks should have extensive comments
+### [N&#x2011;04]<a name="N-04"></a> Assembly blocks should have extensive comments
 Assembly blocks take a lot more time to audit than normal Solidity code, and often have gotchas and side-effects that the Solidity versions of the same code do not. Consider adding more comments explaining what is being done in every step of the assembly code, and describe why assembly is being used instead of Solidity.
 
 *There are 1 instance(s) of this issue:*
@@ -1343,7 +1343,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [44](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L44-L58)
-### [N&#x2011;05] Avoid the use of sensitive terms
+### [N&#x2011;05]<a name="N-05"></a> Avoid the use of sensitive terms
 Use [alternative variants](https://www.zdnet.com/article/mysql-drops-master-slave-and-blacklist-whitelist-terminology/), e.g. allowlist/denylist instead of whitelist/blacklist
 
 *There are 32 instance(s) of this issue:*
@@ -1419,7 +1419,7 @@ File: src/Market.sol
 
 
 *GitHub* : [49](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L49),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L64),[69](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L69),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309),[49](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L49),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L64),[69](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L69),[82](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L82),[105](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L105),[106](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L106),[119](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L119),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309),[310](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L310),[310](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L310),[311](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L311),[311](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L311),[49](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L49),[60](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L60),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L64),[69](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L69),[100](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L100),[101](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L101),[101](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L101),[103](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L103),[103](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L103),[112](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L112),[112](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L112),[306](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L306),[308](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L308),[308](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L308),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309)
-### [N&#x2011;06] Consider adding a block/deny-list
+### [N&#x2011;06]<a name="N-06"></a> Consider adding a block/deny-list
 Doing so will significantly increase centralization, but will help to prevent hackers from using stolen tokens
 
 *There are 2 instance(s) of this issue:*
@@ -1451,7 +1451,7 @@ File: src/asD.sol
 
 
 *GitHub* : [11](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L11-L14)
-### [N&#x2011;07] Consider adding emergency-stop functionality
+### [N&#x2011;07]<a name="N-07"></a> Consider adding emergency-stop functionality
 Adding a way to quickly halt protocol functionality in an emergency, rather than having to pause individual contracts one-by-one, will make in-progress hack mitigation faster and much less stressful.
 
 *There are 3 instance(s) of this issue:*
@@ -1494,7 +1494,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;08] Consider adding formal verification proofs
+### [N&#x2011;08]<a name="N-08"></a> Consider adding formal verification proofs
 Consider using formal verification to mathematically prove that your code does what is intended, and does not have any edge cases with unexpected behavior. The solidity compiler itself has this functionality [built in](https://docs.soliditylang.org/en/latest/smtchecker.html#smtchecker-and-formal-verification)
 
 *There are 1 instance(s) of this issue:*
@@ -1507,7 +1507,7 @@ File: Various Files
 
 
 *GitHub* : [various](https://github.com/code-423n4/2023-11-canto/tree/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts)
-### [N&#x2011;09] Consider defining system-wide constants in a single file
+### [N&#x2011;09]<a name="N-09"></a> Consider defining system-wide constants in a single file
 
 *There are 3 instance(s) of this issue:*
 
@@ -1524,7 +1524,7 @@ File: src/Market.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L14-L14),[15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L15-L15),[16](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L16-L16)
-### [N&#x2011;10] Consider disabling `renounceOwnership()`
+### [N&#x2011;10]<a name="N-10"></a> Consider disabling `renounceOwnership()`
 If the plan for your project does not include eventually giving up all ownership control, consider overwriting OpenZeppelin's `Ownable`'s `renounceOwnership()` function in order to disable it.
 
 *There are 3 instance(s) of this issue:*
@@ -1570,7 +1570,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;11] Consider making contracts `Upgradeable`
+### [N&#x2011;11]<a name="N-11"></a> Consider making contracts `Upgradeable`
 This allows for bugs to be fixed in production, at the expense of _significantly_ increasing centralization.
 
 *There are 4 instance(s) of this issue:*
@@ -1624,7 +1624,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;12] Consider moving `msg.sender` checks to a common authorization `modifier`
+### [N&#x2011;12]<a name="N-12"></a> Consider moving `msg.sender` checks to a common authorization `modifier`
 
 *There are 2 instance(s) of this issue:*
 
@@ -1639,7 +1639,7 @@ File: src/Market.sol
 
 
 *GitHub* : [151](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L151-L151),[254](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L254-L254)
-### [N&#x2011;13] Consider using `delete` rather than assigning zero/false to clear values
+### [N&#x2011;13]<a name="N-13"></a> Consider using `delete` rather than assigning zero/false to clear values
 The `delete` keyword more closely matches the semantics of what is being done, and draws more attention to the changing of state, which may lead to a more thorough audit of its associated logic
 
 *There are 1 instance(s) of this issue:*
@@ -1653,7 +1653,7 @@ File: src/Market.sol
 
 
 *GitHub* : [256](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L256)
-### [N&#x2011;14] Consider using a `struct` rather than having many function input parameters
+### [N&#x2011;14]<a name="N-14"></a> Consider using a `struct` rather than having many function input parameters
 
 *There are 1 instance(s) of this issue:*
 
@@ -1672,7 +1672,7 @@ File: src/asD.sol
 
 
 *GitHub* : [28](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L28-L34)
-### [N&#x2011;15] Consider using named mappings
+### [N&#x2011;15]<a name="N-15"></a> Consider using named mappings
 Consider moving to solidity version 0.8.18 or later, and using [named mappings](https://ethereum.stackexchange.com/a/145555) to make it easier to understand the purpose of each mapping
 
 *There are 10 instance(s) of this issue:*
@@ -1712,7 +1712,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L15-L15)
-### [N&#x2011;16] Constants in comparisons should appear on the left side
+### [N&#x2011;16]<a name="N-16"></a> Constants in comparisons should appear on the left side
 Doing so will prevent [typo bugs](https://www.moserware.com/2008/01/constants-on-left-are-better-but-this.html)
 
 *There are 11 instance(s) of this issue:*
@@ -1762,7 +1762,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26),[26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26)
-### [N&#x2011;17] Contract should expose an `interface`
+### [N&#x2011;17]<a name="N-17"></a> Contract should expose an `interface`
 The `contract`s should expose an `interface` so that other projects can more easily integrate with it, without having to develop their own non-standard variants.
 
 *There are 18 instance(s) of this issue:*
@@ -1830,7 +1830,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [N&#x2011;18] Contracts should have full test coverage
+### [N&#x2011;18]<a name="N-18"></a> Contracts should have full test coverage
 While 100% code coverage does not guarantee that there are no bugs, it often will catch easy-to-find bugs, and will ensure that there are fewer regressions when the code invariably has to be modified. Furthermore, in order to get full coverage, code authors will often have to re-organize their code so that it is more modular, so that each component can be tested separately, which reduces interdependencies between modules and layers, and makes for code that is easier to reason about and audit.
 
 *There are 1 instance(s) of this issue:*
@@ -1843,7 +1843,7 @@ File: Various Files
 
 
 *GitHub* : [various](https://github.com/code-423n4/2023-11-canto/tree/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts)
-### [N&#x2011;19] Custom errors should be used rather than `revert()`/`require()`
+### [N&#x2011;19]<a name="N-19"></a> Custom errors should be used rather than `revert()`/`require()`
 Custom errors are available from solidity version 0.8.4. Custom errors are more easily processed in `try`-`catch` blocks, and are easier to re-use and maintain.
 
 *There are 12 instance(s) of this issue:*
@@ -1890,7 +1890,7 @@ File: src/asD.sol
 
 
 *GitHub* : [54](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L54),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L64),[81](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L81),[86](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L86)
-### [N&#x2011;20] Duplicated `require()`/`revert()` checks should be refactored to a modifier or function
+### [N&#x2011;20]<a name="N-20"></a> Duplicated `require()`/`revert()` checks should be refactored to a modifier or function
 The compiler will inline the function, which will avoid `JUMP` instructions usually associated with functions
 
 *There are 1 instance(s) of this issue:*
@@ -1904,7 +1904,7 @@ File: src/asD.sol
 
 
 *GitHub* : [86](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L86)
-### [N&#x2011;21] Event is not properly `indexed`
+### [N&#x2011;21]<a name="N-21"></a> Event is not properly `indexed`
 Index event fields make the field more quickly accessible [to off-chain tools](https://ethereum.stackexchange.com/questions/40396/can-somebody-please-explain-the-concept-of-event-indexing) that parse events. This is especially useful when it comes to filtering based on an address. However, note that each index field costs extra gas during emission, so it's not necessarily best to index the maximum allowed per event (three fields). Where applicable, each `event` should use three `indexed` fields if there are three or more fields, and gas usage is not particularly of concern for the events in question. If there are fewer than three applicable fields, all of the applicable fields should be indexed.
 
 *There are 1 instance(s) of this issue:*
@@ -1918,7 +1918,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L20)
-### [N&#x2011;22] Events are missing sender information
+### [N&#x2011;22]<a name="N-22"></a> Events are missing sender information
 When an action is triggered based on a user's action, not being able to filter based on who triggered the action makes event processing a lot more cumbersome. Including the `msg.sender` the events of these types of action will make events much more useful to end users, especially when `msg.sender` is not `tx.origin`.
 
 *There are 3 instance(s) of this issue:*
@@ -1944,7 +1944,7 @@ File: src/asD.sol
 
 
 *GitHub* : [89](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L89-L89)
-### [N&#x2011;23] Events may be emitted out of order due to reentrancy
+### [N&#x2011;23]<a name="N-23"></a> Events may be emitted out of order due to reentrancy
 Ensure that events follow the best practice of check-effects-interaction, and are emitted before external calls
 
 *There are 8 instance(s) of this issue:*
@@ -1988,7 +1988,7 @@ File: src/asD.sol
 
 
 *GitHub* : [89](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L89-L89)
-### [N&#x2011;24] Large multiples of ten should use scientific notation
+### [N&#x2011;24]<a name="N-24"></a> Large multiples of ten should use scientific notation
 Large multiples of ten should use scientific notation (e.g. `1e6`) rather than decimal literals (e.g. `1000000`), for readability
 
 *There are 4 instance(s) of this issue:*
@@ -2012,7 +2012,7 @@ File: src/Market.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L14-L14),[197](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L197-L197),[285](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L285-L285),[286](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L286-L286)
-### [N&#x2011;25] Large numeric literals should use underscores for readability
+### [N&#x2011;25]<a name="N-25"></a> Large numeric literals should use underscores for readability
 
 *There are 6 instance(s) of this issue:*
 
@@ -2051,7 +2051,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26),[26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26)
-### [N&#x2011;26] Large or complicated code bases should implement invariant tests
+### [N&#x2011;26]<a name="N-26"></a> Large or complicated code bases should implement invariant tests
 Large code bases, or code with lots of inline-assembly, complicated math, or complicated interactions between multiple contracts, should implement [invariant fuzzing tests](https://medium.com/coinmonks/smart-contract-fuzzing-d9b88e0b0a05). Invariant fuzzers such as Echidna require the test writer to come up with invariants which should not be violated under any circumstances, and the fuzzer tests various inputs and function calls to ensure that the invariants always hold. Even code with 100% code coverage can still have bugs due to the order of the operations a user performs, and invariant fuzzers, with properly and extensively-written invariants, can close this testing gap significantly.
 
 *There are 1 instance(s) of this issue:*
@@ -2064,7 +2064,7 @@ File: Various Files
 
 
 *GitHub* : [various](https://github.com/code-423n4/2023-11-canto/tree/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts)
-### [N&#x2011;27] Memory-safe annotation preferred over comment variant
+### [N&#x2011;27]<a name="N-27"></a> Memory-safe annotation preferred over comment variant
 The memory-safe annotation (`assembly ("memory-safe") { ... }`), available starting in Solidity version 0.8.13 is preferred over the comment variant, which will be removed in a future breaking [release](https://docs.soliditylang.org/en/v0.8.13/assembly.html#memory-safety). The comment variant is only meant for externalized library code that needs to work in earlier versions (e.g. `SafeTransferLib` needs to be able to be used in many different versions).
 
 *There are 1 instance(s) of this issue:*
@@ -2093,7 +2093,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [43](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L43-L58)
-### [N&#x2011;28] Missing checks constructor/initializer assignments
+### [N&#x2011;28]<a name="N-28"></a> Missing checks constructor/initializer assignments
 Consider whether reasonable bounds checks for variables would be useful
 
 *There are 1 instance(s) of this issue:*
@@ -2108,7 +2108,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [11](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L11-L11)
-### [N&#x2011;29] Missing event and or timelock for critical parameter change
+### [N&#x2011;29]<a name="N-29"></a> Missing event and or timelock for critical parameter change
 Events help non-contract tools to track changes, and timelocks prevent users from being surprised by changes
 
 *There are 1 instance(s) of this issue:*
@@ -2122,7 +2122,7 @@ File: src/Market.sol
 
 
 *GitHub* : [311](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L311-L311)
-### [N&#x2011;30] NatSpec: Contract declarations should have `@author` tags
+### [N&#x2011;30]<a name="N-30"></a> NatSpec: Contract declarations should have `@author` tags
 
 *There are 4 instance(s) of this issue:*
 
@@ -2175,7 +2175,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;31] NatSpec: Contract declarations should have `@dev` tags
+### [N&#x2011;31]<a name="N-31"></a> NatSpec: Contract declarations should have `@dev` tags
 `@dev` is used to explain extra details to developers
 
 *There are 4 instance(s) of this issue:*
@@ -2229,7 +2229,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;32] NatSpec: Contract declarations should have `@notice` tags
+### [N&#x2011;32]<a name="N-32"></a> NatSpec: Contract declarations should have `@notice` tags
 `@notice` is used to explain to end users what the contract does, and the compiler interprets `///` or `/**` comments (but not `//` or `/*`) as this tag if one wasn't explicitly provided. Note that the NatSpec comment must be _above_ the contract definition.
 
 *There are 4 instance(s) of this issue:*
@@ -2283,7 +2283,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;33] NatSpec: Contract declarations should have `@title` tags
+### [N&#x2011;33]<a name="N-33"></a> NatSpec: Contract declarations should have `@title` tags
 
 *There are 4 instance(s) of this issue:*
 
@@ -2336,7 +2336,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;34] NatSpec: Contract declarations should have descriptions
+### [N&#x2011;34]<a name="N-34"></a> NatSpec: Contract declarations should have descriptions
 e.g. `@dev` or `@notice`, and it must appear above the contract definition braces in order to be identified by the compiler as NatSpec
 
 *There are 4 instance(s) of this issue:*
@@ -2390,7 +2390,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;35] NatSpec: Event `@param` tag is missing
+### [N&#x2011;35]<a name="N-35"></a> NatSpec: Event `@param` tag is missing
 
 *There are 38 instance(s) of this issue:*
 
@@ -2598,7 +2598,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [10](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L10-L20),[10](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L10-L20),[10](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L10-L20),[10](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L10-L20)
-### [N&#x2011;36] NatSpec: Event declarations should have descriptions
+### [N&#x2011;36]<a name="N-36"></a> NatSpec: Event declarations should have descriptions
 
 *There are 12 instance(s) of this issue:*
 
@@ -2649,7 +2649,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L20-L20)
-### [N&#x2011;37] NatSpec: Function `@param` tag is missing
+### [N&#x2011;37]<a name="N-37"></a> NatSpec: Function `@param` tag is missing
 
 *There are 11 instance(s) of this issue:*
 
@@ -2718,7 +2718,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33),[33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [N&#x2011;38] NatSpec: Function `@return` tag is missing
+### [N&#x2011;38]<a name="N-38"></a> NatSpec: Function `@return` tag is missing
 
 *There are 12 instance(s) of this issue:*
 
@@ -2801,7 +2801,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [N&#x2011;39] NatSpec: Function declarations should have `@notice` tags
+### [N&#x2011;39]<a name="N-39"></a> NatSpec: Function declarations should have `@notice` tags
 `@notice` is used to explain to end users what the function does, and the compiler interprets `///` or `/**` comments (but not `//` or `/*`) as this tag if one wasn't explicitly provided
 
 *There are 4 instance(s) of this issue:*
@@ -2834,7 +2834,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [N&#x2011;40] NatSpec: Function declarations should have descriptions
+### [N&#x2011;40]<a name="N-40"></a> NatSpec: Function declarations should have descriptions
 
 *There are 4 instance(s) of this issue:*
 
@@ -2866,7 +2866,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [33](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L33-L33)
-### [N&#x2011;41] NatSpec: Modifier declarations should have `@notice` tags
+### [N&#x2011;41]<a name="N-41"></a> NatSpec: Modifier declarations should have `@notice` tags
 `@notice` is used to explain to end users what the modifer does, and the compiler interprets `///` or `/**` comments (but not `//` or `/*`) as this tag if one wasn't explicitly provided
 
 *There are 1 instance(s) of this issue:*
@@ -2886,7 +2886,7 @@ File: src/Market.sol
 
 
 *GitHub* : [80](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L80-L86)
-### [N&#x2011;42] NatSpec: Modifier declarations should have descriptions
+### [N&#x2011;42]<a name="N-42"></a> NatSpec: Modifier declarations should have descriptions
 
 *There are 1 instance(s) of this issue:*
 
@@ -2905,7 +2905,7 @@ File: src/Market.sol
 
 
 *GitHub* : [80](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L80-L86)
-### [N&#x2011;43] NatSpec: Public state variable declarations should have descriptions
+### [N&#x2011;43]<a name="N-43"></a> NatSpec: Public state variable declarations should have descriptions
 e.g. `@notice` [tags](https://docs.soliditylang.org/en/latest/natspec-format.html#tags)
 
 *There are 6 instance(s) of this issue:*
@@ -2953,7 +2953,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [12](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L12-L12)
-### [N&#x2011;44] NatSpec: Use `@inheritdoc` to inherit the NatSpec of the base function
+### [N&#x2011;44]<a name="N-44"></a> NatSpec: Use `@inheritdoc` to inherit the NatSpec of the base function
 
 *There are 2 instance(s) of this issue:*
 
@@ -2973,7 +2973,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L14-L19),[27](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L27-L27)
-### [N&#x2011;45] Non-library/interface files should use fixed compiler versions, not floating ones
+### [N&#x2011;45]<a name="N-45"></a> Non-library/interface files should use fixed compiler versions, not floating ones
 Note that some file names may indicate an interface, but actually contain abstract contracts
 
 *There are 2 instance(s) of this issue:*
@@ -2997,7 +2997,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L2)
-### [N&#x2011;46] Ownable contract never uses `onlyOwner` modifier
+### [N&#x2011;46]<a name="N-46"></a> Ownable contract never uses `onlyOwner` modifier
 Consider whether the contract really needs to be `Ownable`
 
 *There are 1 instance(s) of this issue:*
@@ -3015,7 +3015,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;47] Style guide: Contract names should use CamelCase
+### [N&#x2011;47]<a name="N-47"></a> Style guide: Contract names should use CamelCase
 According to the Solidity [style guide](https://docs.soliditylang.org/en/latest/style-guide.html#contract-and-library-names) contract names should be in CamelCase and should match their file names.
 
 *There are 2 instance(s) of this issue:*
@@ -3045,7 +3045,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [N&#x2011;48] Style guide: Function ordering does not follow the Solidity style guide
+### [N&#x2011;48]<a name="N-48"></a> Style guide: Function ordering does not follow the Solidity style guide
 According to the [Solidity style guide](https://docs.soliditylang.org/en/v0.8.17/style-guide.html#order-of-functions), functions should be laid out in the following order :`constructor()`, `receive()`, `fallback()`, `external`, `public`, `internal`, `private`, but the cases below do not follow this pattern
 
 *There are 3 instance(s) of this issue:*
@@ -3066,7 +3066,7 @@ File: src/Market.sol
 
 
 *GitHub* : [150](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L150),[203](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L203),[300](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L300)
-### [N&#x2011;49] Style guide: Lines are too long
+### [N&#x2011;49]<a name="N-49"></a> Style guide: Lines are too long
 Usually lines in source code are limited to [80](https://softwareengineering.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width) characters. Today's screens are much larger so it's reasonable to stretch this in some cases. The solidity style guide recommends a maximumum line length of [120 characters](https://docs.soliditylang.org/en/v0.8.17/style-guide.html#maximum-line-length), so the lines below should be split when they reach that length.
 
 *There are 11 instance(s) of this issue:*
@@ -3116,7 +3116,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L14)
-### [N&#x2011;50] Style guide: Non-`external`/`public` function names should begin with an underscore
+### [N&#x2011;50]<a name="N-50"></a> Style guide: Non-`external`/`public` function names should begin with an underscore
 According to the Solidity Style Guide, non-`external`/`public` function names should begin with an [underscore](https://docs.soliditylang.org/en/latest/style-guide.html#underscore-prefix-for-non-external-functions-and-variables)
 
 *There are 1 instance(s) of this issue:*
@@ -3130,7 +3130,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [42](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L42-L42)
-### [N&#x2011;51] Style guide: Variable names for `immutable`s should use CONSTANT_CASE
+### [N&#x2011;51]<a name="N-51"></a> Style guide: Variable names for `immutable`s should use CONSTANT_CASE
 For `immutable` variable names, each word should use all capital letters, with underscores separating each word (CONSTANT_CASE)
 
 *There are 2 instance(s) of this issue:*
@@ -3154,7 +3154,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L8-L8)
-### [N&#x2011;52] Unused `public` contract variable
+### [N&#x2011;52]<a name="N-52"></a> Unused `public` contract variable
 Note that there may be cases where a variable superficially appears to be used, but this is only because there are multiple definitions of the variable in different files. In such cases, the variable definition should be moved into a separate file. The instances below are the unused variables.
 
 *There are 1 instance(s) of this issue:*
@@ -3168,7 +3168,7 @@ File: src/Market.sol
 
 
 *GitHub* : [46](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L46-L46)
-### [N&#x2011;53] Unused import
+### [N&#x2011;53]<a name="N-53"></a> Unused import
 The identifier is imported but never used within the file
 
 *There are 1 instance(s) of this issue:*
@@ -3183,7 +3183,7 @@ File: src/asD.sol
 
 
 *GitHub* : [5](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L5-L5)
-### [N&#x2011;54] Use of `override` is unnecessary
+### [N&#x2011;54]<a name="N-54"></a> Use of `override` is unnecessary
 Starting with Solidity version [0.8.8](https://docs.soliditylang.org/en/v0.8.20/contracts.html#function-overriding), using the `override` keyword when the function solely overrides an interface function, and the function doesn't exist in multiple base contracts, is unnecessary.
 
 *There are 2 instance(s) of this issue:*
@@ -3204,7 +3204,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L14-L19),[27](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L27-L27)
-### [N&#x2011;55] Use the latest solidity (prior to 0.8.20 if on L2s) for deployment
+### [N&#x2011;55]<a name="N-55"></a> Use the latest solidity (prior to 0.8.20 if on L2s) for deployment
 ```
 When deploying contracts, you should use the latest released version of Solidity. Apart from exceptional cases, only the latest version receives security fixes.
 ```
@@ -3233,7 +3233,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L2)
-### [N&#x2011;56] Using `>`/`>=` without specifying an upper bound is unsafe
+### [N&#x2011;56]<a name="N-56"></a> Using `>`/`>=` without specifying an upper bound is unsafe
 There _will_ be breaking changes in future versions of solidity, and at that point your code will no longer be compatable. While you may have the specific version to use in a configuration file, others that include your source files may not.
 
 *There are 2 instance(s) of this issue:*
@@ -3256,10 +3256,10 @@ File: src/asDFactory.sol
 ```
 
 
-*GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2)### Disputed Risk Issues <a name="01"></a>
+*GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2)### Disputed Risk Issues
 
 
-### [D&#x2011;01] ~~`approve()`/`safeApprove()` may revert if the current approval is not zero~~
+### [D&#x2011;01]<a name="D-01"></a> ~~`approve()`/`safeApprove()` may revert if the current approval is not zero~~
 The general rule is valid, but the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -3273,7 +3273,7 @@ File: src/asD.sol
 
 
 *GitHub* : [51](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L51-L51)
-### [D&#x2011;02] ~~Avoid updating storage when the value hasn't changed~~
+### [D&#x2011;02]<a name="D-02"></a> ~~Avoid updating storage when the value hasn't changed~~
 If the old value is equal to the new value, not re-storing the value will avoid a Gsreset (**2900 gas**), potentially at the expense of a Gcoldsload (**2100 gas**) or a Gwarmaccess (**100 gas**)
 
 *There are 2 instance(s) of this issue:*
@@ -3296,7 +3296,7 @@ File: src/Market.sol
 
 
 *GitHub* : [309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309-L312),[104](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L104-L108)
-### [D&#x2011;03] ~~Avoid Zero to Non-Zero Storage Writes Where Possible~~
+### [D&#x2011;03]<a name="D-03"></a> ~~Avoid Zero to Non-Zero Storage Writes Where Possible~~
 There is no actual actionable code suggestion being made for the provided cases
 
 *There are 2 instance(s) of this issue:*
@@ -3312,7 +3312,7 @@ File: src/Market.sol
 
 
 *GitHub* : [246](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L246-L246),[295](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L295-L295)
-### [D&#x2011;04] ~~Bad bot rules~~
+### [D&#x2011;04]<a name="D-04"></a> ~~Bad bot rules~~
 The titles below correspond to issues submitted by various bots, where the submitting bot solely submitted invalid findings (i.e. the submitter didn't filter the results of the rule), so they should be given extra scrutiny:
 - **Max allowance is not compatible with all tokens** - internal approval for the contract's own balance, so the rule is pointing to the support **for** max allowance
 - **increase/decrease allowance should be used instead of approve** - this is an internal approval function
@@ -3360,7 +3360,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L2)
-### [D&#x2011;05] ~~Consider adding a block/deny-list~~
+### [D&#x2011;05]<a name="D-05"></a> ~~Consider adding a block/deny-list~~
 Contract doesn't handle tokens
 
 *There are 2 instance(s) of this issue:*
@@ -3388,7 +3388,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8-L11)
-### [D&#x2011;06] ~~Constant decimal values~~
+### [D&#x2011;06]<a name="D-06"></a> ~~Constant decimal values~~
 These instances have nothing to do with a token's decimals, so these findings are invalid
 
 *There are 3 instance(s) of this issue:*
@@ -3414,7 +3414,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [23](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L23-L23)
-### [D&#x2011;07] ~~Constant redefined elsewhere~~
+### [D&#x2011;07]<a name="D-07"></a> ~~Constant redefined elsewhere~~
 The general rule is valid, but the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -3429,7 +3429,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [12](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L12-L12)
-### [D&#x2011;08] ~~Contracts do not work with fee-on-transfer tokens~~
+### [D&#x2011;08]<a name="D-08"></a> ~~Contracts do not work with fee-on-transfer tokens~~
 An ERC20 token being used, in and of itself, is not evidence of a fee-on-transfer issue; there must be other evidence that the balance accounting gets broken, and these lines do not contain such evidence.
 
 *There are 1 instance(s) of this issue:*
@@ -3443,7 +3443,7 @@ File: src/Market.sol
 
 
 *GitHub* : [92](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L92-L92)
-### [D&#x2011;09] ~~Control structures do not follow the Solidity Style Guide~~
+### [D&#x2011;09]<a name="D-09"></a> ~~Control structures do not follow the Solidity Style Guide~~
 The instances below properly drop down to the next line when the arguments are too long
 
 *There are 2 instance(s) of this issue:*
@@ -3463,7 +3463,7 @@ File: src/Market.sol
 
 
 *GitHub* : [113](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L113-L115),[279](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L279-L281)
-### [D&#x2011;10] ~~Default `bool` values are manually reset~~
+### [D&#x2011;10]<a name="D-10"></a> ~~Default `bool` values are manually reset~~
 Using delete instead of assigning zero/false to state variables does not save any extra gas with the optimizer [on](https://gist.github.com/IllIllI000/ef8ec3a70aede7f12433fe63dc418515#with-the-optimizer-set-at-200-runs) (saves 5-8 gas with optimizer completely off), so this finding is invalid, especially since if they were interested in gas savings, they'd have the optimizer enabled. Some bots are also flagging `true` rather than just `false`
 
 *There are 1 instance(s) of this issue:*
@@ -3477,7 +3477,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [35](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L35-L35)
-### [D&#x2011;11] ~~Duplicated `require()`/`revert()` checks should be refactored to a modifier or function~~
+### [D&#x2011;11]<a name="D-11"></a> ~~Duplicated `require()`/`revert()` checks should be refactored to a modifier or function~~
 This instance appears only once
 
 *There are 10 instance(s) of this issue:*
@@ -3520,7 +3520,7 @@ File: src/asD.sol
 
 
 *GitHub* : [54](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L54),[81](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L81)
-### [D&#x2011;12] ~~Duplicated require()/revert() checks should be refactored to a modifier Or function to save gas~~
+### [D&#x2011;12]<a name="D-12"></a> ~~Duplicated require()/revert() checks should be refactored to a modifier Or function to save gas~~
 If the compiler inlines the function, there will be no gas savings. If it doesn't, there's extra runtime overhead due to the JUMP instructions. Either way, this suggestion is not helpful.
 
 *There are 1 instance(s) of this issue:*
@@ -3534,7 +3534,7 @@ File: src/asD.sol
 
 
 *GitHub* : [86](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L86)
-### [D&#x2011;13] ~~Enable IR-based code generation~~
+### [D&#x2011;13]<a name="D-13"></a> ~~Enable IR-based code generation~~
 By using `--via-ir` or `{"viaIR": true}`, the compiler is able to use more advanced [multi-function optimizations](https://docs.soliditylang.org/en/v0.8.17/ir-breaking-changes.html#solidity-ir-based-codegen-changes), for extra gas savings.
 
 *There are 1 instance(s) of this issue:*
@@ -3547,7 +3547,7 @@ File: Various Files
 
 
 *GitHub* : [various](https://github.com/code-423n4/2023-11-canto/tree/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts)
-### [D&#x2011;14] ~~Event names should use CamelCase~~
+### [D&#x2011;14]<a name="D-14"></a> ~~Event names should use CamelCase~~
 The instances below are already CamelCase (events are supposed to use CamelCase, not lowerCamelCase)
 
 *There are 12 instance(s) of this issue:*
@@ -3599,7 +3599,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L20-L20)
-### [D&#x2011;15] ~~Events that mark critical parameter changes should contain both the old and the new value~~
+### [D&#x2011;15]<a name="D-15"></a> ~~Events that mark critical parameter changes should contain both the old and the new value~~
 These are not critical parameter changes
 
 *There are 11 instance(s) of this issue:*
@@ -3649,7 +3649,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [36](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L36-L36)
-### [D&#x2011;16] ~~Inconsistent comment spacing~~
+### [D&#x2011;16]<a name="D-16"></a> ~~Inconsistent comment spacing~~
 URLs are not comments
 
 *There are 4 instance(s) of this issue:*
@@ -3677,7 +3677,7 @@ File: src/asD.sol
 
 
 *GitHub* : [53](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L53),[64](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L64),[86](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L86)
-### [D&#x2011;17] ~~It is standard for all external and public functions to be override from an interface~~
+### [D&#x2011;17]<a name="D-17"></a> ~~It is standard for all external and public functions to be override from an interface~~
 According to the Solidity [docs](https://docs.soliditylang.org/en/v0.8.20/contracts.html#function-overriding), "Starting from Solidity 0.8.8, the `override` keyword is not required when overriding an interface function, except for the case where the function is defined in multiple bases", so while it may have been a requirement in the past, they're trying to change that. Paired with the advice of making all `public` and `external` functions a part of an `interface`, this finding would end up having all sponsors mark all `public`/`external` functions with `override`, making the keyword meaningless. It's better to use `override` only when something is actually being overridden.
 
 *There are 2 instance(s) of this issue:*
@@ -3698,7 +3698,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [14](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L14-L19),[27](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L27-L27)
-### [D&#x2011;18] ~~It's not standard to end and begin a code object on the same line~~
+### [D&#x2011;18]<a name="D-18"></a> ~~It's not standard to end and begin a code object on the same line~~
 These are perfectly standard
 
 *There are 11 instance(s) of this issue:*
@@ -3756,7 +3756,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [4](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L4-L4),[5](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L5-L5),[6](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L6-L6)
-### [D&#x2011;19] ~~Large approvals may not work with some ERC20 tokens~~
+### [D&#x2011;19]<a name="D-19"></a> ~~Large approvals may not work with some ERC20 tokens~~
 These are not maximum approvals, or approvals that grow over time, so there is no broken behavior here
 
 *There are 1 instance(s) of this issue:*
@@ -3770,7 +3770,7 @@ File: src/asD.sol
 
 
 *GitHub* : [51](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L51-L51)
-### [D&#x2011;20] ~~Loss of precision~~
+### [D&#x2011;20]<a name="D-20"></a> ~~Loss of precision~~
 The general rule is valid, but the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -3785,7 +3785,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [35](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L35-L35)
-### [D&#x2011;21] ~~Low level calls with Solidity before 0.8.14 result in an optimiser bug~~
+### [D&#x2011;21]<a name="D-21"></a> ~~Low level calls with Solidity before 0.8.14 result in an optimiser bug~~
 This assembly block does not call `mstore()`, so it's not possible to hit the bug here even if there are small future changes, so this doesn't seem low severity.
 
 *There are 1 instance(s) of this issue:*
@@ -3813,7 +3813,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [44](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L44-L58)
-### [D&#x2011;22] ~~Missing checks for state variable assignments~~
+### [D&#x2011;22]<a name="D-22"></a> ~~Missing checks for state variable assignments~~
 The general rule is valid, but the instances below are invalid
 
 *There are 5 instance(s) of this issue:*
@@ -3840,7 +3840,7 @@ File: src/Market.sol
 
 
 *GitHub* : [161](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L161-L161),[162](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L162-L162),[163](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L163-L163),[234](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L234-L234),[235](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L235-L235)
-### [D&#x2011;23] ~~Missing event and or timelock for critical parameter change~~
+### [D&#x2011;23]<a name="D-23"></a> ~~Missing event and or timelock for critical parameter change~~
 These assignments are not missing events
 
 *There are 6 instance(s) of this issue:*
@@ -3914,7 +3914,7 @@ File: src/Market.sol
 
 
 *GitHub* : [118](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L118-L127),[119](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L119-L127),[120](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L120-L127),[243](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L243-L249),[251](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L251-L259),[298](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L298-L304)
-### [D&#x2011;24] ~~Must approve or increase allowance first~~
+### [D&#x2011;24]<a name="D-24"></a> ~~Must approve or increase allowance first~~
 The bot is just flagging `transferFrom()` calls without a prior approval. Many projects require you to approve their contract before using it, so this suggestion is not helpful, and certainly is not 'Low' severity, since that's the design and no funds are lost. There is no way for the project to address this issue other than by requiring that the caller send the tokens themselves, which has its own risks.
 
 *There are 4 instance(s) of this issue:*
@@ -3942,7 +3942,7 @@ File: src/asD.sol
 
 
 *GitHub* : [50](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L50-L50)
-### [D&#x2011;25] ~~NatSpec: Function declarations should have `@notice` tags~~
+### [D&#x2011;25]<a name="D-25"></a> ~~NatSpec: Function declarations should have `@notice` tags~~
 The compiler interprets `///` or `/**` comments [as this tag](https://docs.soliditylang.org/en/latest/natspec-format.html#tags) if one wasn't explicitly provided
 
 *There are 20 instance(s) of this issue:*
@@ -4020,7 +4020,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [24](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L24-L24)
-### [D&#x2011;26] ~~Not using the named return variables anywhere in the function is confusing~~
+### [D&#x2011;26]<a name="D-26"></a> ~~Not using the named return variables anywhere in the function is confusing~~
 The variable is in fact used, so the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -4035,7 +4035,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [42](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L42-L42)
-### [D&#x2011;27] ~~Re-org attack~~
+### [D&#x2011;27]<a name="D-27"></a> ~~Re-org attack~~
 No specific vulnerability has been outlined, other than the fact that block chains have re-orgs, and nothing is being cloned here.
 
 *There are 1 instance(s) of this issue:*
@@ -4049,7 +4049,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [34](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L34-L34)
-### [D&#x2011;28] ~~Reduce gas usage by moving to Solidity 0.8.19 or later~~
+### [D&#x2011;28]<a name="D-28"></a> ~~Reduce gas usage by moving to Solidity 0.8.19 or later~~
 Already >= 0.8.19
 
 *There are 2 instance(s) of this issue:*
@@ -4073,7 +4073,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L2-L2)
-### [D&#x2011;29] ~~Return values of transfer()/transferFrom() not checked~~
+### [D&#x2011;29]<a name="D-29"></a> ~~Return values of transfer()/transferFrom() not checked~~
 The examples below are for known contracts that revert if they fail, are for non-ERC20 contracts, or aren't the right function
 
 *There are 1 instance(s) of this issue:*
@@ -4087,7 +4087,7 @@ File: src/asD.sol
 
 
 *GitHub* : [35](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L35-L35)
-### [D&#x2011;30] ~~Revert on transfer to the zero address~~
+### [D&#x2011;30]<a name="D-30"></a> ~~Revert on transfer to the zero address~~
 Forcing called tokens to not allow transfers to `address(0)` breaks composability if that token requires this functionality.
 
 *There are 13 instance(s) of this issue:*
@@ -4133,7 +4133,7 @@ File: src/asD.sol
 
 
 *GitHub* : [50](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L50-L50),[66](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L66-L66),[88](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L88-L88)
-### [D&#x2011;31] ~~safeMint should be used in place of mint~~
+### [D&#x2011;31]<a name="D-31"></a> ~~safeMint should be used in place of mint~~
 These are not ERC721.mint() calls
 
 *There are 1 instance(s) of this issue:*
@@ -4147,7 +4147,7 @@ File: src/asD.sol
 
 
 *GitHub* : [52](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L52-L52)
-### [D&#x2011;32] ~~Setters should prevent re-setting of the same value~~
+### [D&#x2011;32]<a name="D-32"></a> ~~Setters should prevent re-setting of the same value~~
 The general rule is valid, but the instances below are invalid
 
 *There are 2 instance(s) of this issue:*
@@ -4170,7 +4170,7 @@ File: src/Market.sol
 
 
 *GitHub* : [104](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L104-L108),[309](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L309-L312)
-### [D&#x2011;33] ~~Solidity version 0.8.20 may not work on other chains due to `PUSH0`~~
+### [D&#x2011;33]<a name="D-33"></a> ~~Solidity version 0.8.20 may not work on other chains due to `PUSH0`~~
 The general rule is valid, but the instances below are invalid
 
 *There are 2 instance(s) of this issue:*
@@ -4194,7 +4194,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L2)
-### [D&#x2011;34] ~~SPDX identifier should be the in the first line of a solidity file~~
+### [D&#x2011;34]<a name="D-34"></a> ~~SPDX identifier should be the in the first line of a solidity file~~
 It's already on the first line
 
 *There are 4 instance(s) of this issue:*
@@ -4238,7 +4238,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [1](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L1)
-### [D&#x2011;35] ~~State variable read in a loop~~
+### [D&#x2011;35]<a name="D-35"></a> ~~State variable read in a loop~~
 These references to the variable cannot be cached, or the variable is `constant`/`immutable`
 
 *There are 1 instance(s) of this issue:*
@@ -4253,7 +4253,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [21](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L21-L21)
-### [D&#x2011;36] ~~Storage Write Removal Bug On Conditional Early Termination~~
+### [D&#x2011;36]<a name="D-36"></a> ~~Storage Write Removal Bug On Conditional Early Termination~~
 In solidity versions 0.8.13 through 0.8.16, there is a [bug](https://blog.soliditylang.org/2022/09/08/storage-write-removal-before-conditional-termination/) involving the use of the Yul functions `return()` and `stop()`. If those functions aren't called, or if the Solidity version doesn't match, the finding is not low severity.
 
 *There are 1 instance(s) of this issue:*
@@ -4281,7 +4281,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [44](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L44-L58)
-### [D&#x2011;37] ~~Style guide: Contract does not follow the Solidity style guide's suggested layout ordering~~
+### [D&#x2011;37]<a name="D-37"></a> ~~Style guide: Contract does not follow the Solidity style guide's suggested layout ordering~~
 There are no issues with contract layout in these contracts
 
 *There are 4 instance(s) of this issue:*
@@ -4325,7 +4325,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [8](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L8)
-### [D&#x2011;38] ~~Style guide: Function Names Not in mixedCase~~
+### [D&#x2011;38]<a name="D-38"></a> ~~Style guide: Function Names Not in mixedCase~~
 According to the Solidity Style Guide, non-`external`/`public` function names should begin with an [underscore](https://docs.soliditylang.org/en/latest/style-guide.html#underscore-prefix-for-non-external-functions-and-variables), and all of these fall into that category
 
 *There are 2 instance(s) of this issue:*
@@ -4345,7 +4345,7 @@ File: src/Market.sol
 
 
 *GitHub* : [272](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L272-L272),[280](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L280-L284)
-### [D&#x2011;39] ~~Style guide: Function names should use lowerCamelCase~~
+### [D&#x2011;39]<a name="D-39"></a> ~~Style guide: Function names should use lowerCamelCase~~
 The general rule is valid, but the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -4359,7 +4359,7 @@ File: src/Market.sol
 
 
 *GitHub* : [194](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L194-L194)
-### [D&#x2011;40] ~~Tokens may be minted to `address(0x0)`~~
+### [D&#x2011;40]<a name="D-40"></a> ~~Tokens may be minted to `address(0x0)`~~
 In the cases below, `_mint()` prevents minting to `address(0x0)`
 
 *There are 1 instance(s) of this issue:*
@@ -4391,7 +4391,7 @@ File: src/Market.sol
 
 
 *GitHub* : [203](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L203-L221)
-### [D&#x2011;41] ~~Top level pragma declarations should be separated by two blank lines~~
+### [D&#x2011;41]<a name="D-41"></a> ~~Top level pragma declarations should be separated by two blank lines~~
 Pragmas aren't top-level declarations, and the [style guide](https://docs.soliditylang.org/en/latest/style-guide.html#blank-lines) doesn't use two spaces there.
 
 *There are 4 instance(s) of this issue:*
@@ -4443,7 +4443,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [2](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L2-L4)
-### [D&#x2011;42] ~~Top-level declarations should be separated by at least two lines~~
+### [D&#x2011;42]<a name="D-42"></a> ~~Top-level declarations should be separated by at least two lines~~
 The Style Guide [says](https://docs.soliditylang.org/en/v0.8.20/style-guide.html#blank-lines) that _functions_ should be separated by one line, not two
 
 *There are 4 instance(s) of this issue:*
@@ -4487,7 +4487,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [31](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L31-L33)
-### [D&#x2011;43] ~~Trade-offs Between Modifiers and Internal Functions~~
+### [D&#x2011;43]<a name="D-43"></a> ~~Trade-offs Between Modifiers and Internal Functions~~
 There is nothing that the sponsor can do that would make this finding disappear, besides never using modifiers, so it's not a useful finding.
 
 *There are 1 instance(s) of this issue:*
@@ -4501,7 +4501,7 @@ File: src/Market.sol
 
 
 *GitHub* : [118](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L118-L118)
-### [D&#x2011;44] ~~Unnecessary look up in if condition~~
+### [D&#x2011;44]<a name="D-44"></a> ~~Unnecessary look up in if condition~~
 
 *There are 5 instance(s) of this issue:*
 
@@ -4538,7 +4538,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [26](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L26-L26)
-### [D&#x2011;45] ~~Unused function parameter~~
+### [D&#x2011;45]<a name="D-45"></a> ~~Unused function parameter~~
 The variable is in fact used, so the instances below are invalid
 
 *There are 1 instance(s) of this issue:*
@@ -4553,7 +4553,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [42](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L42-L42)
-### [D&#x2011;46] ~~Unused import~~
+### [D&#x2011;46]<a name="D-46"></a> ~~Unused import~~
 These instances _are_ used
 
 *There are 18 instance(s) of this issue:*
@@ -4635,7 +4635,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [4](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L4-L4),[5](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L5-L5),[6](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L6-L6)
-### [D&#x2011;47] ~~Unusual loop variable~~
+### [D&#x2011;47]<a name="D-47"></a> ~~Unusual loop variable~~
 These instances all properly use 'i' as the outer for-loop loop variable
 
 *There are 1 instance(s) of this issue:*
@@ -4649,7 +4649,7 @@ File: src/bonding_curve/LinearBondingCurve.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol#L20-L20)
-### [D&#x2011;48] ~~Use != 0 instead of > 0 for unsigned integer comparison~~
+### [D&#x2011;48]<a name="D-48"></a> ~~Use != 0 instead of > 0 for unsigned integer comparison~~
 Only valid prior to Solidity version 0.8.13, and only for `require()` statements, and at least one of those is not true for the examples below
 
 *There are 4 instance(s) of this issue:*
@@ -4669,7 +4669,7 @@ File: src/Market.sol
 
 
 *GitHub* : [165](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L165-L165),[216](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L216-L216),[266](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L266-L266),[289](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L289-L289)
-### [D&#x2011;49] ~~Use `_safeMint` instead of `_mint` for ERC721~~
+### [D&#x2011;49]<a name="D-49"></a> ~~Use `_safeMint` instead of `_mint` for ERC721~~
 The contract here isn't an ERC721 - it's some other token. Note that ERC1155 defines `_mint()`, not `_safeMint()`
 
 *There are 3 instance(s) of this issue:*
@@ -4695,7 +4695,7 @@ File: src/asD.sol
 
 
 *GitHub* : [47](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L47-L47)
-### [D&#x2011;50] ~~Use `assembly` to write address/contract type storage values~~
+### [D&#x2011;50]<a name="D-50"></a> ~~Use `assembly` to write address/contract type storage values~~
 Using this suggestion stomps over any value packed into the same slot as the address, so this advice is not generically safe.
 
 *There are 5 instance(s) of this issue:*
@@ -4733,7 +4733,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [25](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L25-L25)
-### [D&#x2011;51] ~~Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes~~
+### [D&#x2011;51]<a name="D-51"></a> ~~Use `uint256(1)`/`uint256(2)` instead of `true`/`false` to save gas for changes~~
 These are never reset to `false`, so there is no gas savings in making the change
 
 *There are 1 instance(s) of this issue:*
@@ -4747,7 +4747,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [15](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L15-L15)
-### [D&#x2011;52] ~~Use assembly to emit events, in order to save gas~~
+### [D&#x2011;52]<a name="D-52"></a> ~~Use assembly to emit events, in order to save gas~~
 For these events, there doesn't appear to be more than [one word's worth](https://gist.github.com/IllIllI000/07f18824f5061a5f265785607dc88f55) of unindexed args, or the arguments are too large to fit in the scratch space, so findings related to these events are likey invalid and definitely invalid, respectively.
 
 *There are 10 instance(s) of this issue:*
@@ -4795,7 +4795,7 @@ File: src/asDFactory.sol
 
 
 *GitHub* : [20](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asDFactory.sol#L20-L20)
-### [D&#x2011;53] ~~Use delete instead of setting mapping/state variable to zero, to save gas~~
+### [D&#x2011;53]<a name="D-53"></a> ~~Use delete instead of setting mapping/state variable to zero, to save gas~~
 Using delete instead of assigning zero to state variables does not save any extra gas with the optimizer [on](https://gist.github.com/IllIllI000/ef8ec3a70aede7f12433fe63dc418515#with-the-optimizer-set-at-200-runs) (saves 5-8 gas with optimizer completely off), so this finding is invalid, especially since if they were interested in gas savings, they'd have the optimizer enabled.
 
 *There are 2 instance(s) of this issue:*
@@ -4811,7 +4811,7 @@ File: src/Market.sol
 
 
 *GitHub* : [246](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L246-L246),[256](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L256-L256)
-### [D&#x2011;54] ~~Use of a single-step ownership transfer~~
+### [D&#x2011;54]<a name="D-54"></a> ~~Use of a single-step ownership transfer~~
 There is no prior owner here
 
 *There are 1 instance(s) of this issue:*
@@ -4839,7 +4839,7 @@ File: src/asD.sol
 
 
 *GitHub* : [28](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/asD/src/asD.sol#L28-L42)
-### [D&#x2011;55] ~~Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas~~
+### [D&#x2011;55]<a name="D-55"></a> ~~Using `calldata` instead of `memory` for read-only arguments in `public`/`external` functions saves gas~~
 The function argument is not read-only
 
 *There are 1 instance(s) of this issue:*
@@ -4854,7 +4854,7 @@ File: src/Market.sol
 
 
 *GitHub* : [122](https://github.com/code-423n4/2023-11-canto/blob/516099801101950ac9e1117a70e095b06f9bf6a1/1155tech-contracts/src/Market.sol#L122-L122)
-### [D&#x2011;56] ~~Using bitmap to store bool states can save gas~~
+### [D&#x2011;56]<a name="D-56"></a> ~~Using bitmap to store bool states can save gas~~
 none of these are examples where bitmaps can be used
 
 *There are 3 instance(s) of this issue:*
