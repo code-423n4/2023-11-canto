@@ -88,10 +88,10 @@ The functions `claimPlatformFee`, `claimHolderFee`, and `claimCreatorFee` are us
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [1155tech-contracts/src/Market.sol](https://github.com/code-423n4/2023-11-canto/blob/1155tech-contracts/src/Market.sol) | 191 | Main 1155tech contract that is used to buy / sell / create shares | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol](https://github.com/code-423n4/2023-11-canto/blob/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol) | 45 | Linear bonding curve | None |
-| [asD/src/asDFactory.sol](https://github.com/code-423n4/2023-11-canto/blob/asD/src/asDFactory.sol) | 22 | Factory for creating application-specific dollars | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [asD/src/asD.sol](https://github.com/code-423n4/2023-11-canto/blob/asD/src/asD.sol) | 58 | Application-specific dollar contract | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [1155tech-contracts/src/Market.sol](https://github.com/code-423n4/2023-11-canto/blob/main/1155tech-contracts/src/Market.sol) | 191 | Main 1155tech contract that is used to buy / sell / create shares | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol](https://github.com/code-423n4/2023-11-canto/blob/main/1155tech-contracts/src/bonding_curve/LinearBondingCurve.sol) | 45 | Linear bonding curve | None |
+| [asD/src/asDFactory.sol](https://github.com/code-423n4/2023-11-canto/blob/main/asD/src/asDFactory.sol) | 22 | Factory for creating application-specific dollars | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [asD/src/asD.sol](https://github.com/code-423n4/2023-11-canto/blob/main/asD/src/asD.sol) | 58 | Application-specific dollar contract | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
 # Additional Context
 
