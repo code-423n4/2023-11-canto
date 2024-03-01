@@ -1,0 +1,1220 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2023 / canto-nov13
+==============================================================
+
+[11/10/2023 16:07] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $24,500 **Canto Application Specific Dollars and Bonding Curves for 1155s** audit!
+
+📆 Audit opens 11/13/2023 20:00 (20:00 UTC) and runs through 11/17/2023 20:00 (20:00 UTC) (4 days).
+
+Please give a warm welcome to the Canto team, particularly @Roman, who will be available for questions either here in the channel or via DM in the CET timezone.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-11-canto-application-specific-dollars-and-bonding-curves-for-1155s
+
+{Reactions}
+🔥 (2) 
+
+[11/10/2023 16:07] knownfactc4_29311
+Pinned a message.
+
+
+[11/10/2023 16:09] knownfactc4_29311 (pinned)
+For this audit, you have the option to be paid out in USDC or CANTO.  If you want to claim your awards in $ worth of CANTO, please follow the steps in the thread prior to the audit close: 11/17/2023 20:00 .  If you do not follow the steps in the thread, any earned rewards will be paid out in USDC.
+
+Details in thread
+👇
+
+
+[11/10/2023 16:12] knownfactc4_29311
+Pinned a message.
+
+
+[11/12/2023 10:42] almurhasan
+Is it audited previously
+
+
+[11/12/2023 15:04] 0xsimeon
+Not sure about this particular codebase but canto have had previous audits iirc.
+
+
+[11/12/2023 21:46] ustas.eth
+Check out Github, there were several
+https://github.com/code-423n4/?q=canto
+
+
+[11/13/2023 21:23] thebrittfactor (pinned)
+**4naly3er Report**
+
+The 4naly3er report can be found [here](https://github.com/code-423n4/2023-11-canto/blob/main/4naly3er-report.md).
+
+*Note for C4 wardens: The 4naly3er report is ran by our pre-audit Scouts and will be posted at audit launch. This will be in addition to the automated findings (bot report), so anything included in the 4naly3er or the automated findings output (once shared) is considered a publicly known issue and is ineligible for awards.*
+
+
+[11/13/2023 21:23] thebrittfactor
+Pinned a message.
+
+
+[11/13/2023 21:37] caglankaan
+🤔
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/image-EBDFF.png
+
+
+[11/13/2023 21:49] ustas.eth
+Are you submitting already? :4739_Skeletor:
+
+
+[11/13/2023 21:49] caglankaan
+yeah couple small thing nothing important
+
+
+[11/13/2023 23:03] thebrittfactor
+Can you try incognito?
+
+
+[11/13/2023 23:13] habib0x
+Hello, i'm facing an issue while submitting a finding
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/Screenshot_2023-11-14_at_12.10.44_AM-0AB82.png
+
+
+[11/13/2023 23:22] itsmetechjay
+can you try logging out and back in?
+
+
+[11/13/2023 23:28] habib0x
+same issue still
+
+
+[11/13/2023 23:28] itsmetechjay
+k have flagged for our dev team.
+
+{Reactions}
+thankyou 
+
+[11/13/2023 23:30] habib0x
+alright thank you :()
+
+
+[11/14/2023 00:15] liveactionllamac4
+Fyi, this issue should now be resolved.
+
+{Reactions}
+thankyou (2) 
+
+[11/14/2023 00:31] 0xsimeon
+That won't be caught by bots?
+
+
+[11/14/2023 06:41] sp1cymeatball
+What is `turnstile`?
+https://github.com/code-423n4/2023-11-canto/blob/main/asD/src/asDFactory.sol#L28
+
+
+[11/14/2023 06:48] habib0x
+Its a registry system that register any asD token that was created
+https://docs.canto.io/evm-development/contract-secured-revenue#registering-a-contract
+
+{Embed}
+https://docs.canto.io/evm-development/contract-secured-revenue
+Contract Secured Revenue (CSR)
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/s0mjXRz9RIq2Csw6wDlO-44C72.png
+
+{Reactions}
+🙏 (2) 
+
+[11/14/2023 08:18] sp1cymeatball
+Hey @Roman ! Is the $NOTE token the only one that will be used as an underlying in asD?
+
+
+[11/14/2023 08:21] lambda9382
+yep
+
+{Reactions}
+thankyou (2) 
+
+[11/14/2023 10:26] Message Wolf#0225 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Automated findings output for the audit can be found [here](https://gist.github.com/code423n4/8152d0e300fc048c8aac9da328fa8475).
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+
+[11/14/2023 10:45] lambda9382
+Application specific dollars will only be deployed on Canto. 1155tech may be deployed on other chains in the future (with a different payment token), but the current focus / plan is also the deployment on Canto
+
+{Reactions}
+👍 
+
+[11/14/2023 11:19] lambda9382
+It is the cToken you receive when supplying NOTE to the Canto Lending Market (which is a fork of Compound), some more details are available in the docs: https://docs.canto.io/free-public-infrastructure-fpi/note
+
+{Embed}
+https://docs.canto.io/free-public-infrastructure-fpi/note
+$NOTE
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/bRp1LFQoMn10yl2RAMeT-F5787.png
+
+
+[11/14/2023 11:39] elcid2000
+Cannot access `asD/src/asDFactory.sol` Any help? Thanks
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/image-B7776.png
+
+
+[11/14/2023 11:49] sp1cymeatball
+switch to the main branch
+
+{Reactions}
+👍 
+
+[11/14/2023 14:21] thebrittfactor
+Pinned a message.
+
+
+[11/14/2023 14:46] m4k2
+which version of OZ is used ?
+
+
+[11/14/2023 15:33] plamkata
+What chain deployments
+
+
+[11/14/2023 16:51] 0x11singh99
+`Initiates CSR on main- and testnet`      
+what is csr ?
+
+
+[11/14/2023 17:32] .akira0327
+contract secured revenue
+
+{Reactions}
+👍 
+
+[11/14/2023 17:43] zims0690
+Hey. `ontract asDFactory is Ownable2Step` in this case can I take a look at `Ownable2Step`? Its not in scope but the contract that is relays on it. Is it strictly out of scope?
+
+
+[11/14/2023 17:53] plamkata
+If you think you can find an issue in OZ you can hit a big bug bounty ngl XDD
+
+
+[11/14/2023 18:00] crc32#4377
+Lokok at it just to understand the concept and context
+
+
+[11/14/2023 18:00] crc32#4377
+Those contract's are not vulnerable
+
+
+[11/14/2023 18:00] crc32#4377
+I mean OZ contracts
+
+
+[11/14/2023 18:00] zims0690
+didnt know its an OZ contract. Thanks. my mmistake
+
+
+[11/14/2023 18:01] crc32#4377
+Anyway you have to know what Ownable2Step is (not for finding issue, just for understanding the context)
+
+{Reactions}
+👍 
+
+[11/14/2023 18:03] crc32#4377
+Hey man, have you gotten the concept of this contest ? What the project is about ?
+
+
+[11/14/2023 18:05] crc32#4377
+I have not seen the docs and codes yet, but i know you get the logic behind the projects very fast
+
+
+[11/14/2023 18:05] crc32#4377
+So I'm interested to know your understanding from this project
+
+
+[11/14/2023 18:07] crc32#4377
+Look at `lib/openzeppelin-contracts`
+
+
+[11/14/2023 18:08] crc32#4377
+Try `forge install`, this will update the dependencies on your local machine
+
+
+[11/14/2023 19:25] chainsnake
+@Roman , What kind of ERC20 tokens can be used in Market?
+
+
+[11/14/2023 19:27] chainsnake
+I found the answer from ReadMe 🧐
+
+
+[11/14/2023 20:37] .keccak
+The contracts listed in the Scope table are throwing 404s for this contests. They are linking to the 1155tech-contracts branch instead of main
+
+
+[11/14/2023 21:05] knownfactc4_29311
+Got these adjusted, should be correctly linking now.
+
+{Reactions}
+thankyou (3) hi5 (3) 
+
+[11/14/2023 22:33] 0xjmaria
+could anyone explain something more about the csr and turnstile?
+
+
+[11/15/2023 00:35] .akira0327
+Never mind that. It's the mechanism to collect fee from every transaction on the node
+
+
+[11/15/2023 02:24] sweetcat0118
+How can I see the CERC20 smart contract, I can see only interface now
+
+
+[11/15/2023 02:24] sweetcat0118
+Doese anyone help me?
+
+
+[11/15/2023 02:45] 0xpiken
+It's compound protocol, you can check https://github.com/compound-finance/compound-protocol/blob/master/contracts/CErc20.sol
+
+{Embed}
+https://github.com/compound-finance/compound-protocol/blob/master/contracts/CErc20.sol
+compound-protocol/contracts/CErc20.sol at master · compound-finance...
+The Compound On-Chain Protocol. Contribute to compound-finance/compound-protocol development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/28116800-ca4e-11e9-8c7f-9d2893015df5-E4FEA
+
+
+[11/15/2023 02:46] sweetcat0118
+thx
+
+
+[11/15/2023 04:32] sweetcat0118
+Can anyone help me to find the part of initializing admin address in cer20 token?
+As you know, require(msg.sender ==  admin) is in initialize function but there is no function that sets admin address like as constructor
+
+
+[11/15/2023 05:00] nmirchev8
+It uses  `Ownable()` constructor, which sets the admin to msg.sender
+
+
+[11/15/2023 05:04] sweetcat0118
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/image-FCBB3.png
+
+
+[11/15/2023 05:04] sweetcat0118
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/image-ED676.png
+
+
+[11/15/2023 05:04] sweetcat0118
+I cannot see it
+
+
+[11/15/2023 05:19] nmirchev8
+I don't know where are you looking, but this is out of scope
+
+
+[11/15/2023 06:07] 0x11singh99
+is this also deployed on Canto blockchain ?
+
+
+[11/15/2023 06:53] nmirchev8
+Hey,
+Should `share.metadataURI` be dependant to the base erc1155 uri, or it could be an arbitrary one?
+
+
+[11/15/2023 08:05] kimchi_the_dog
+Hey @Roman , dmed you
+
+
+[11/15/2023 08:08] plamkata
+Could you provide some explanation to the ``getPriceAndFee()`` parameters. At first look I cannot wrap my head around why we skip the totalCount index by adding 1 and why during sale we do ``-amount + 1``
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/image-44A7A.png
+
+{Reactions}
+😂 
+
+[11/15/2023 08:08] plamkata
+thanks in advance
+
+
+[11/15/2023 08:21] sweetcat0118
+@Roman How can I see the turnstile contract code?
+
+
+[11/15/2023 08:31] nmirchev8
+`shareCount The number of shares in circulation. For buys, this is the amount after the first buy succeeds (e.g., 1 for the first ever buy).
+    /// For sells, this is the amount before the sell is executed (e.g., 1 when the only remaining share is sold).`
+
+If this is helpful. I think after reading it 2-3 times and the example in the test I have understood
+
+
+[11/15/2023 09:13] lambda9382
+Should not be very relevant for this contest, but if you are interested in the details, there was a previous contest for the turnstile contracts: https://github.com/code-423n4/2022-11-canto/tree/main
+
+{Embed}
+https://github.com/code-423n4/2022-11-canto/tree/main
+GitHub - code-423n4/2022-11-canto
+Contribute to code-423n4/2022-11-canto development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/8df1cc3b-fef3-481c-b99d-398698165d39-CBEE2
+
+
+[11/15/2023 09:38] 0xauditism
+why are assigning turnstile to asD's, isn't it meant to be used with nft's ?
+
+
+[11/15/2023 10:34] plamkata
+Do we ever make sure that the cNote provided is the correct token
+
+
+[11/15/2023 12:14] nmirchev8
+Deployer of the factory is trusted and there it is set as immutable... I guess this makes it safe
+
+
+[11/15/2023 13:15] chainsnake
+@Roman , is there any doc to easily understand market fee calculation logic?
+
+
+[11/15/2023 13:22] nmirchev8
+What is the case if there are active shares with a bonding curve, which later would be removed
+
+
+[11/15/2023 13:25] lambda9382
+No, but for `LinearBondingCurve`, the formula is pretty simple. It is `0.1 / log2(shareCount)`. The intuition behind this is that the fee should decrease for larger markets (hence the division by the share count), but it should only do so slowly / sub-linear (hence the log2)
+
+{Reactions}
+👍 (2) 
+
+[11/15/2023 13:32] plamkata
+Yeah leaving them active is kinda weird
+
+{Reactions}
+👍 
+
+[11/15/2023 13:32] plamkata
+Since there would still be circulation
+
+{Reactions}
+👍 
+
+[11/15/2023 14:02] 0xauditism
+@Roman
+
+
+[11/15/2023 14:05] passteque
+How does a normal user get some ASD token?
+
+
+[11/15/2023 14:05] lambda9382
+You mean the `turnstile.register` in the constructor? That is related to CSR (https://docs.canto.io/evm-development/contract-secured-revenue) and ensures that we get the CSR revenue, but not connected to the functionality of the protocol
+
+{Embed}
+https://docs.canto.io/evm-development/contract-secured-revenue
+Contract Secured Revenue (CSR)
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/s0mjXRz9RIq2Csw6wDlO-44C72.png
+
+
+[11/15/2023 14:10] passteque
+I dont get in the tests why the Market contract mint all the ASD ( here MTK) tokens then how people are able to use buy()
+
+
+[11/15/2023 14:21] 0xauditism
+@Roman  But I don't see why it is needed in the asDFactory and asD, isn't the CSR only relevant for NFT's ?
+
+
+[11/15/2023 14:22] lambda9382
+No, you can register CSR for every contract (on Canto). You get an NFT in return (which allows you to claim the revenue), but otherwise, CSR and NFTs are not connected
+
+
+[11/15/2023 14:23] 0xauditism
+Understand now, I had things mixed up, thank you
+
+
+[11/15/2023 15:02] turbo_kirby
+mmmm
+
+
+[11/15/2023 15:43] .akira0327
+@Roman Can you check my dm and answer?
+
+
+[11/15/2023 15:44] jnforja
+Just so this is 100% clear. Any issues that might arise from 1155tech being used in a chain that's not Canto is considered out of scope for this contest, is this correct?
+
+
+[11/15/2023 16:50] lambda9382
+Ah sorry your message was marked as spam by Discord for some reason, replied now
+
+{Reactions}
+😂 
+
+[11/15/2023 16:51] lambda9382
+I am personally not interested in these issues because they will not be a problem, not sure how it's handled in terms of judging
+
+{Reactions}
+👍🏻 
+
+[11/16/2023 02:58] coffiasd
+Does sponsor support DM or i need to create a private sub-channel ?
+
+
+[11/16/2023 03:08] sandnallani
+Best practice is to create a private thread.
+
+
+[11/16/2023 03:29] coffiasd
+okay thx
+
+
+[11/16/2023 08:53] csjaybit
+what is tunrstile??
+
+
+[11/16/2023 09:21] daniel526
+@Roman check private thread!
+
+{Reactions}
+✅ (2) 
+
+[11/16/2023 10:05] nmirchev8
+Hey, @Roman 
+Could provide a context of minting an NFT from the shares?
+It is used to transfer shares between users only?
+
+
+[11/16/2023 10:09] almurhasan
+Roman dm you
+
+
+[11/16/2023 10:52] daniel526
+@Roman check thread again
+
+
+[11/16/2023 10:59] lambda9382
+No, the main motivation for minting NFTs is to get a token with the art, for instance if someone wants to use it as a PFP
+
+{Reactions}
+❤️ (2) 
+
+[11/16/2023 11:29] 0xarno
+check dm
+
+
+[11/16/2023 12:56] danhapo
+@Roman what's the reason that a holder cannot claim the fee of `buy()`?
+
+
+[11/16/2023 13:13] lambda9382
+You mean why they do not profit from the fees of their own buys? Mainly a design decision, but would also lead to weird incentives (making it profitable to split up a large buy into many smaller ones)
+
+
+[11/16/2023 14:16] debofx
+Hi @thebrittfactor | C4 @🦙 liveactionllama | C4 I'm getting the following error when trying to submit an issue on c4 canto page: ```Back to Canto Application Specific Dollars and Bonding Curves for 1155s audit page
+Canto Application Specific Dollars and Bonding Curves for 1155s finding
+Internal server error.
+
+Try again``` @Jay | C4
+
+
+[11/16/2023 16:17] 0xdemonnn
+Hello, create a thread @Roman
+
+
+[11/16/2023 17:02] plamkata
+@Roman will the Market have any initial asD in it or will it operate solely on users payments and fees?
+
+
+[11/16/2023 17:21] 0xaman.
+when will be claimholderFee  called by holder?
+
+
+[11/16/2023 17:56] lambda9382
+Solely on user payments without initial liquidity
+
+
+[11/16/2023 17:56] jvorex
+quick question @Roman . Are there market contracts for every aSD?
+
+
+[11/16/2023 17:58] lambda9382
+No, there probably will not be a 1:1 mapping between markets and asD tokens. One asD tokens can have none associated markets or it could also have multiple ones (although that is rather unusual)
+
+
+[11/16/2023 19:46] jvorex
+ty!
+
+
+[11/16/2023 20:19] .akira0327
+Market owner is trusted role or general user?
+
+
+[11/17/2023 02:16] putricioo
+what is the porpouse of shares created by market.sol
+
+
+[11/17/2023 03:59] nailkhalimov
+Based on documentation: `1155tech is an art protocol that will use asD as its currency. In contrast to existing bonding curve protocols, users can pay a fee to mint ERC1155 tokens based on their shares.`
+It means on amount of shares is calculating fees for minting ERC1155 tokens.
+
+{Reactions}
+🙏 thankyou 
+
+[11/17/2023 06:34] chris0xff
+what kind of volume on these shares
+
+
+[11/17/2023 06:34] chris0xff
+on the bondage(😊 )
+
+
+[11/17/2023 07:11] trachev
+@Roman sent a DM.
+
+
+[11/17/2023 11:18] 0xg03.14
+@Roman sent DM
+
+
+[11/17/2023 11:23] 7a4raf
+I lost hope after reading the bot report lol
+
+{Reactions}
+😄 
+
+[11/17/2023 11:54] coffiasd
+I'm can't find any significant vulnerabilities i'm out
+
+
+[11/17/2023 11:58] coffiasd
+Hope you guys can submit some interesting finds :canto:
+
+
+[11/17/2023 12:07] chris0xff
+dont look at robots like that.  they are there to pick up the slack and keep humans off of tasks that dont require a nonautonomous mindform
+
+{Reactions}
+👍 
+
+[11/17/2023 12:08] 7a4raf
+I know, but they are getting so good at this 😂
+
+
+[11/17/2023 12:08] chris0xff
+that bot report is ammunition
+
+
+[11/17/2023 12:08] chris0xff
+that bot was damned good but it was also saying a lot of dumb shit
+
+
+[11/17/2023 12:09] chris0xff
+i didnt do much with it but if i were going to make use of it i would have pruned at least half of it out for redundancy and irrelevancy
+
+
+[11/17/2023 12:10] chris0xff
+then i would use th erest to map out my atttack
+
+{Reactions}
+👌 
+
+[11/17/2023 12:19] chris0xff
+the bot is like a hunting dog. he can smell and hear better than you but he cant make the kill
+
+{Reactions}
+🤣 (3) 
+
+[11/17/2023 12:28] kosedogus
+@Roman sent DM
+
+
+[11/17/2023 12:50] mrpotatomagic
+@Roman dmed
+
+
+[11/17/2023 13:21] kimchi_the_dog
+During the audit, I recommend not looking at the bot report and looking for vulnerabilities yourself, and only after finding it, check before submission whether it is in the bot report to avoid duplication.
+
+If the situation repeats itself and your finds are found automatically, it is not worth spending your time on them. Try to automate them. 😉
+
+{Reactions}
+❤️ 
+
+[11/17/2023 14:26] chris0xff
+thats an interesting approach. that is definitely a good approach to learning a lot of things and building a good foundation. I like how it incorporates making your own tools
+
+
+[11/17/2023 14:32] thekmj
+I think reading the bot report (especially L issues) is still really good for learning as a dev. In a real world setting, a lot of "best practices" can be extended to an actual vulnerability. With a bot that nitpicks all of your smallest issues, you can hardly overlook anything, and you get up-to-date with the tech as well.
+
+
+[11/17/2023 14:51] chris0xff
+real life catastrophic events are always a murphys law style composition of many less significant oversights synergistically culminating into one massive fuckup
+
+
+[11/17/2023 14:52] chris0xff
+any sort of industrial disaster seems to consistently look like this
+
+
+[11/17/2023 15:57] elcid2000
+where can I read the bot report?
+
+
+[11/17/2023 16:00] 0xepley
+https://github.com/code-423n4/2023-11-canto/blob/main/bot-report.md
+
+{Embed}
+https://github.com/code-423n4/2023-11-canto/blob/main/bot-report.md
+2023-11-canto/bot-report.md at main · code-423n4/2023-11-canto
+Contribute to code-423n4/2023-11-canto development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/d35d23af-4b23-410b-8d58-990e833635b6-E2AB6
+
+{Reactions}
+🙏 
+
+[11/17/2023 19:04] qwertypark
+sorry for off topic, is that possible to chain two issues by link together via c4 platform?
+
+
+[11/17/2023 19:06] jvorex
+no
+
+{Reactions}
+🥲 
+
+[11/17/2023 19:11] chainshield
+the fee is always in eth or acan be in any other erc20 token
+
+
+[11/17/2023 19:30] chris0xff
+bondage fee?
+
+
+[11/17/2023 19:48] jvorex
+erc20 e.g asD ["TEST TOKEN"]
+
+
+[11/17/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Canto Application Specific Dollars and Bonding Curves for 1155s** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements  for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+✅ (6) 10_10 (3) canto (4) 
+
+[11/17/2023 20:11] glcanvas
+503
+
+{Reactions}
+👀 (7) 🤯 (3) 
+
+[11/17/2023 20:12] ustas.eth
+It was a good one :4739_Skeletor:
+
+
+[11/17/2023 21:01] .akira0327
+how much submissions? maybe no issue for this contract
+
+
+[11/18/2023 00:08] sandnallani
+How do you get this information?
+
+
+[11/18/2023 01:11] m_rassska
++backstage access
+
+
+[11/18/2023 02:47] sandnallani
+Raise your hands if you’ll found any C/Hs.
+
+{Reactions}
+👋 (2) 
+
+[11/18/2023 03:13] coffiasd
+Awesome finding 🫡
+
+
+[11/18/2023 03:24] coffiasd
+Can canto validator order the transactions like mainnet?
+
+
+[12/01/2023 04:32] 0xdemonnn
+Maybe the result come out next week? 😕
+
+
+[12/05/2023 17:56] thebrittfactor
+🤑 🎉  Awards for **Canto Application**:
+
+$905.76 USDC » @100su 
+$902.94 USDC » @0xpiken 
+$902.94 USDC » @bin2chen 
+$898.86 USDC » SpicyMeatball 
+$897.49 USDC » @ether_sky 
+$897.49 USDC » @immeas 
+$739.56 USDC » @pontifex 
+$738.19 USDC » @adriro 
+$695.83 USDC » @T1MOH 
+$695.83 USDC » @bart1e 
+$695.83 USDC » @osmanozdemir1 
+$691.75 USDC » @ustas 
+$691.75 USDC » @ast3ros 
+$690.37 USDC » nazirite 
+$690.37 USDC » @0xluckhu 
+$690.37 USDC » @wangxx2026 
+$690.37 USDC » @sha256(Saediek) 
+$690.37 USDC » @Soul22 
+$288.91 USDC » @0xSmartContract 
+$278.33 USDC » @MrPotatoMagic 
+$271.43 USDC » @Bauchibred 
+$269.25 USDC » Krace 
+$212.57 USDC » @d3e4 
+$208.90 USDC » @rvierdiiev 
+$208.49 USDC » mojito_auditor 
+$208.49 USDC » @glcanvas 
+$208.49 USDC » @0xhuy0512 
+$208.49 USDC » @Yanchuan 
+$208.49 USDC » @PENGUN 
+$207.11 USDC » @leegh 
+$207.11 USDC » @lanrebayode77 
+$207.11 USDC » @AS 
+$207.11 USDC » @D1r3Wolf 
+$207.11 USDC » @0xAadi
+
+
+[12/05/2023 17:56] thebrittfactor
+$118.64 USDC » @0xVolcano 
+$114.39 USDC » @hunter_w3b 
+$91.26 USDC » @mgf15 
+$91.26 USDC » @sivanesh_808 
+$71.81 USDC » chaduke 
+$56.09 USDC » @lsaudit 
+$47.82 USDC » @kaveyjoe 
+$27.32 USDC » @K42 Ψ 
+$20.42 USDC » @Kose 
+$19.04 USDC » @invitedtea 
+$19.04 USDC » @0xbrett8571 
+$19.04 USDC » @Fouzantanveer 
+$19.04 USDC » @cats 
+$19.04 USDC » @unique
+$19.04 USDC » @Lin
+$19.04 USDC » @0xepley
+$19.04 USDC » @Sathish9098
+$19.04 USDC » @Aariiif
+$19.04 USDC » Myd
+$19.04 USDC » clara
+$12.35 USDC » @cheatc0d3 
+$8.27 USDC » @tabriz
+$8.27 USDC » @0xAnah
+$8.27 USDC » @john80
+$8.27 USDC » @JCK
+$8.27 USDC » parlayan_yildizlar_takimi (@ulas, @caglankaan and @ata)
+$8.27 USDC » 0xta
+$8.27 USDC » 0xhex
+$5.45 USDC » @max10afternoon 
+$5.45 USDC » @zhaojie 
+$5.45 USDC » @Phoenix 
+$5.45 USDC » @jasonxiale
+$5.45 USDC » @aslanbek
+$5.45 USDC » @pep7siup
+$5.45 USDC » @Jaraxxus775 
+$4.08 USDC » @firmanregar 
+$4.08 USDC » @merlinboii 
+$4.08 USDC » @nailkhalimov 
+$4.08 USDC » @critical-or-high 
+$4.08 USDC » @codynhat 
+$4.08 USDC » @ayden 
+$4.08 USDC » @Matin 
+$4.08 USDC » @wisdomn_ 
+$4.08 USDC » @MohammedRizwan 
+$4.08 USDC » @sl1 
+$4.08 USDC » @Topmark 
+$4.08 USDC » bareli 
+$4.08 USDC » @btk 
+$4.08 USDC » @young 
+$4.08 USDC » @tourist 
+$4.08 USDC » @ZanyBonzy 
+$4.08 USDC » @ksk2345 
+$4.08 USDC » @erebus 
+$4.08 USDC » @OMEN 
+$4.08 USDC » sbaudh6 
+$4.08 USDC » shenwilly 
+$4.08 USDC » SandNallani
+
+
+[12/05/2023 17:56] thebrittfactor
+$1.37 USDC » @zhaojohnson 
+$1.37 USDC » @ElCid 
+$1.37 USDC » @auditism 
+$1.37 USDC » @t0x1c 
+$1.37 USDC » @0xBitcoin 
+$1.37 USDC » @RaoulSchaffranek 
+$1.37 USDC » @HChang26 
+$1.37 USDC » @0x3b 
+$1.37 USDC » @openwide 
+$1.37 USDC » @twcctop 
+$1.37 USDC » @rice_cooker 
+$1.37 USDC » @neo.crao 
+$1.37 USDC » @KupiaSec 
+$1.37 USDC » @0x175 
+$1.37 USDC » @nmirchev8 
+$1.37 USDC » @VanGrim 
+$1.37 USDC » @Arno 
+$1.37 USDC » @inzinko 
+$1.37 USDC » @peritoflores 
+$1.37 USDC » @Madalad 
+$1.37 USDC » @jnforja 
+$1.37 USDC » @turvy_fuzz 
+$1.37 USDC » @0xMango
+$1.37 USDC » rouhsamad 
+$1.37 USDC » Tricko 
+$1.37 USDC » mahyar 
+$1.37 USDC » DarkTower (@Gelato_ST, @Kenzo, @0xrex and @Maroutis)
+$1.37 USDC » deepkin 
+$1.37 USDC » Udsen 
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 1 unique (18 total)
+Med risk findings: 2 unique (73 total)
+Gas reports: 17 total (Best: 0xVolcano) 
+QA reports: 44 total (Best: chaduke) 
+Advanced anaylsis reports: 17 total (Best: 0xSmartContract) 
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🎉 (7) hi5 
+
+[12/05/2023 18:01] t1moh
+Noone flexing?
+
+{Reactions}
+😁 (3) 😥 (4) 
+
+[12/05/2023 18:02] ustas.eth
+Yooo, 7 hundreds, not bad!
+
+
+[12/05/2023 18:02] ustas.eth
+Thanks to the team and C4!
+
+
+[12/05/2023 18:03] ustas.eth
+I'll start :4739_Skeletor:
+
+
+[12/05/2023 18:04] ustas.eth
+Top 12 is nice
+
+{Reactions}
+🔥 (3) 
+
+[12/05/2023 18:07] 0xepley
+https://tenor.com/view/penguin-flex-gif-19749030
+
+{Embed}
+https://tenor.com/view/penguin-flex-gif-19749030
+Code4rena - ARCHIVE-Q4-2023 - canto-nov13 [1172195122230853723].txt_Files/penguin-flex-FE524.png
+
+
+[12/05/2023 18:46] rouhsamad
+nice, does it say leaderboard on my profile now?
+
+
+[12/05/2023 18:47] rouhsamad
+Or is it top 5 only
+
+
+[12/05/2023 18:47] rouhsamad
+I won 1.37 cents btw 😁😆
+
+{Reactions}
+☝️ (2) 
+
+[12/05/2023 18:48] catscanaudit
+You get the leaderboard tag on the discord once you've entered the leaderboard on C4
+
+
+[12/05/2023 18:49] catscanaudit
+Idk if it's for a certain x$ or just have to get any payout though
+
+
+[12/05/2023 18:49] catscanaudit
+Is this your first time joining a competition
+
+
+[12/05/2023 18:50] rouhsamad
+yes
+
+
+[12/05/2023 18:50] catscanaudit
+keep it going and read the report when it comes out to see what youve missed
+
+{Reactions}
+10_10 
+
+[12/05/2023 19:01] thebrittfactor
+Any amount!  We'll get these roles added as time allows 🙂
+
+{Reactions}
+👍 (2) 
+
+[12/05/2023 19:48] .100su
+Wow!! No1 for me???? So thrilled !!🔥
+
+{Reactions}
+🎉 (10) 
+
+[12/05/2023 19:51] mgf15
+welcome to leaderbord
+
+{Reactions}
+❤️ 
+
+[12/05/2023 20:03] irving6969
+Im on list let’s go
+
+
+[12/05/2023 21:12] kimchi_the_dog
+Anyone have a backstage role? I would like to see feedback on my issue as I am sure it was a valid thing, same with analysis.
+
+
+[12/05/2023 21:37] itsmetechjay
+You'll be able to see the results of your findings once the report is published and the findings repo is public.
+
+
+[12/05/2023 21:38] kimchi_the_dog
+Is the repo with the finds already available? What is the link?
+
+
+[12/05/2023 21:38] itsmetechjay
+It is not available yet - once we publish the report it will be made available.
+
+
+[12/05/2023 21:39] kimchi_the_dog
+Ok, that's why I wanted someone with a backstage role. Unfortunately, usually we have to wait a very long time for the report. : (
+
+
+[12/05/2023 21:40] kimchi_the_dog
+Thank you for your replies @Jay | C4
+
+
+[12/05/2023 21:49] itsmetechjay
+Yep I can understand wanting to see your results sooner.  Backstage wardens also need to keep the information about findings private until the repos are open.
+
+
+[12/05/2023 22:57] developerjordy
+Happy to be on the list, but still a lot of work to do. Will be waiting for the report
+
+
+[12/06/2023 04:09] hisoul22
+@100su congrats.
+
+{Reactions}
+❤️ 
+
+[12/06/2023 05:32] catscanaudit
+Backstage role is not allowed to discuss the private repo's before the official report is put out
+
+
+[12/09/2023 00:40] wangxx2026
+The money hasn't been distributed yet?
+
+
+[12/09/2023 09:38] saediek
+Yepp that’s true
+
+
+[12/10/2023 04:36] chris0xff
+if my finding is not on the list that means i can disclose it in public?
+
+
+[12/10/2023 08:36] kimchi_the_dog
+Overall, it's probably recommended to wait.
+
+But there's really no prohibition I believe. The finding has been declared invalid and you will not be able to escalate it anyway as it requires a backstage role.
+
+
+[12/10/2023 08:43] chris0xff
+k why was it invalid?
+
+
+[12/10/2023 08:49] kimchi_the_dog
+I don't know, we'll only find out when the report comes out. (I also don't have a backstage role), but if you say it's not on the list, it certainly wasn't considered valid.
+
+
+[12/10/2023 08:49] kimchi_the_dog
+(I have a similar case, I also believe that what I reported was valid) - so I understand and wait with you bro 😄
+
+
+[12/10/2023 08:51] chris0xff
+wait for what though?
+
+
+[12/10/2023 08:53] kimchi_the_dog
+to see why it was marked invalid
+
+
+[12/10/2023 08:54] chris0xff
+mmm yes. but if you are sure that it is technically valid then what could be helpful there
+
+
+[12/10/2023 09:00] chris0xff
+it owuld have to be marked invalid for some reason about scope or something or perceived lack of impact within the context of the codebase in scope, or something like that, which is not relevant to the quality of your work, so its not really useful to learn from in a technical sense.
+
+
+[12/10/2023 09:02] chris0xff
+or if it was erroneusly marked invalid it owuldnt matter because there is no way to correct that
+
+
+[12/10/2023 09:05] chris0xff
+am i correct here? theres no action that can be taken if you dont have backstage access. so theres nothing to wait for other than technical feedback that protentially exists in the report repo
+
+
+[12/10/2023 18:06] catscanaudit
+If you are 100% sure it's a valid bug and in-scope and provided working coded PoC to prove it's a bug it would be valid
+
+
+[12/10/2023 18:09] catscanaudit
+I'm not sure if you need backstage to escalate findings but I believe so
+
+
+[12/10/2023 18:09] catscanaudit
+Yeah you need it cause you cant see the judging repo without backstage
+
+
+[12/10/2023 18:09] chris0xff
+im 100% sure its a valid bug but in the context of the codebase it could be argued to be of dubious impact
+
+
+[12/10/2023 18:10] catscanaudit
+Sorry Im just a warden cant help further
+
+
+[12/11/2023 02:14] wangxx2026
+It may be an issue, but it also depends on the impact of the issue. Some issues with minor impacts will not be taken seriously. Some projects will issue issue bounties on other platforms. You can pay attention to whether this project will issue issue bounties later. If so, you can submit more sufficient evidence to submit the issue again.
+
+
+[12/11/2023 11:40] chris0xff
+bugs only decay in value generally. it was not hard to find, had signs of a struggle followed by a big blood trail right up to the mangled corpse
+
+
+[12/11/2023 11:40] bluesky_hope_01029
+Rewards are sent?
+
+
+[12/11/2023 12:28] olanre_waju
+don't think so
+
+
+[12/11/2023 12:29] nazirite8017
+Not yet
+
+{Reactions}
+🙏 (2) 
+
+[12/15/2023 13:16] anarcheuz
+Hey guys, how can I take a look at submitted issues/escalate if I am not backstage?
+
+
+[12/15/2023 14:00] _paperparachute
+When the sponsor is ready, the repo will be made public, and you can check your findings then.
+
+
+[12/15/2023 14:12] anarcheuz
+I see rewards have already been attributed to some people. Does it mean my submissions were not valid if I don't see them? If yes it's not possible to escalate or at least know why it's invalid since repo is not public until the sponsor is ready?
+
+
+[12/15/2023 14:13] _paperparachute
+Yes, if you weren't in the award announcement you can assume your findings were invalidated. You won't be able to see why until the repo is public.
+
+
+[12/15/2023 14:15] anarcheuz
+Is it possible to argue if it was erroneously deemed invalid when the repo is public ?
+
+
+[12/15/2023 14:19] _paperparachute
+Please see [this](https://docs.code4rena.com/awarding/fairness-and-validity#if-you-disagree-with-a-judges-decision) section of the docs.
+
+
+[12/15/2023 14:20] anarcheuz
+Thank you.
+
+
+[12/16/2023 18:41] sivanesh_808
+Rewards are sent ??
+
+
+[12/16/2023 19:27] 0xaadhi
+Yes
+
+
+[12/17/2023 08:28] kimchi_the_dog
+Hey @0xTheC0der , could you please explain why this issue was marked as duplicate and out of scope?
+https://github.com/code-423n4/2023-11-canto-findings/issues/51
+
+There is a significant difference in:
+1. results/impact on risk
+2. way on how to remove the vulnerability (this issue can be removed while leaving renounce not overridden, if the team wants to keep this feature).
+
+
+[12/17/2023 17:39] 0xthec0der
+Hey,
+renouncing the ownership and possibe implications are already covered by L-11 in the  bot report and therefore OOS , see https://github.com/code-423n4/2023-11-canto/blob/main/bot-report.md#L-11
+
+Furthermore, this would be owner self-harm which is only of low severity.
+
+
+[12/17/2023 18:30] kimchi_the_dog
+But this issue is not that it can be renounced. It is associated with CSR rewards. The vulnerability can be removed by using the `assign()` function instead of `register()` from trunstile and assigning CSR rewards to a previously created NFT.
+
+And it wouldn't be self-harm because it requires awareness of what a given function will do. In this case, the expected action after "renounce" is to no longer have the owner. However, this bug is besides not having an owner also blocks forever an important part of the project and is irreversible.
+
+
+[12/17/2023 19:29] 0xthec0der
+Issue could only arise after renouncing ownership of factory (malicious owner action) --> OOS L-11.
+
+If it would not be OOS:
+Factory itself is "worthless" since it holds no assets and can be easily redeployed.
+No rewards or user funds are lost.
+Due to low impacts and requiring owner error --> Overinflated severity
+
+
+[12/18/2023 07:06] kimchi_the_dog
+Okay, although I don't agree with the first point (because renounce is not a malicious function in itself - if it were, it wouldn't be in the standard. You may want to call it simply to get rid of ownership, and the fact is that it will crash part of the project is a bug that does not result from self-harm.
+
+In the second case, if we assume that we do not mind redirecting users to a new address (which is not easy without a proxy), I understand your point of view.
+
+Thanks for explanation your point of view.
+
+{Reactions}
+💜 
+
+[02/24/2024 02:48] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Saturday, 02 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+[02/29/2024 22:34] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 221 message(s)
+==============================================================
